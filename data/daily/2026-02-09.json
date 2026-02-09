@@ -1,6 +1,6 @@
 {
   "date": "2026-02-09",
-  "fetchedAt": "2026-02-09T20:53:16.792Z",
+  "fetchedAt": "2026-02-09T20:57:09.011Z",
   "github": [
     {
       "id": "gh-vllm-project-vllm",
@@ -37,7 +37,7 @@
       "matchedGroup": "accelerators",
       "stars": 69901,
       "language": "Python",
-      "forks": 13327,
+      "forks": 13328,
       "fullName": "vllm-project/vllm"
     },
     {
@@ -245,7 +245,7 @@
         "nats-server"
       ],
       "matchedGroup": "edge-ai",
-      "stars": 19120,
+      "stars": 19119,
       "language": "Go",
       "forks": 1729,
       "fullName": "nats-io/nats-server"
