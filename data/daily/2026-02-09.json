@@ -1,0 +1,3539 @@
+{
+  "date": "2026-02-09",
+  "fetchedAt": "2026-02-09T20:53:16.792Z",
+  "github": [
+    {
+      "id": "gh-vllm-project-vllm",
+      "source": "github",
+      "title": "vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "url": "https://github.com/vllm-project/vllm",
+      "date": "2026-02-09",
+      "authors": [
+        "vllm-project"
+      ],
+      "tags": [
+        "amd",
+        "blackwell",
+        "cuda",
+        "deepseek",
+        "deepseek-v3",
+        "gpt",
+        "gpt-oss",
+        "inference",
+        "kimi",
+        "llama",
+        "llm",
+        "llm-serving",
+        "model-serving",
+        "moe",
+        "openai",
+        "pytorch",
+        "qwen",
+        "qwen3",
+        "tpu",
+        "transformer"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 69901,
+      "language": "Python",
+      "forks": 13327,
+      "fullName": "vllm-project/vllm"
+    },
+    {
+      "id": "gh-hiyouga-LlamaFactory",
+      "source": "github",
+      "title": "LlamaFactory",
+      "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
+      "url": "https://github.com/hiyouga/LlamaFactory",
+      "date": "2026-02-09",
+      "authors": [
+        "hiyouga"
+      ],
+      "tags": [
+        "agent",
+        "ai",
+        "deepseek",
+        "fine-tuning",
+        "gemma",
+        "gpt",
+        "instruction-tuning",
+        "large-language-models",
+        "llama",
+        "llama3",
+        "llm",
+        "lora",
+        "moe",
+        "nlp",
+        "peft",
+        "qlora",
+        "quantization",
+        "qwen",
+        "rlhf",
+        "transformers"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 67101,
+      "language": "Python",
+      "forks": 8157,
+      "fullName": "hiyouga/LlamaFactory"
+    },
+    {
+      "id": "gh-FFmpeg-FFmpeg",
+      "source": "github",
+      "title": "FFmpeg",
+      "description": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
+      "url": "https://github.com/FFmpeg/FFmpeg",
+      "date": "2026-02-09",
+      "authors": [
+        "FFmpeg"
+      ],
+      "tags": [
+        "audio",
+        "c",
+        "ffmpeg",
+        "fft",
+        "hevc",
+        "hls",
+        "matroska",
+        "mp4",
+        "mpeg",
+        "multimedia",
+        "rtmp",
+        "rtsp",
+        "streaming",
+        "video",
+        "webm"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 57050,
+      "language": "C",
+      "forks": 13466,
+      "fullName": "FFmpeg/FFmpeg"
+    },
+    {
+      "id": "gh-jax-ml-jax",
+      "source": "github",
+      "title": "jax",
+      "description": "Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more",
+      "url": "https://github.com/jax-ml/jax",
+      "date": "2026-02-09",
+      "authors": [
+        "jax-ml"
+      ],
+      "tags": [
+        "jax"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 34824,
+      "language": "Python",
+      "forks": 3414,
+      "fullName": "jax-ml/jax"
+    },
+    {
+      "id": "gh-Tencent-ncnn",
+      "source": "github",
+      "title": "ncnn",
+      "description": "ncnn is a high-performance neural network inference framework optimized for the mobile platform",
+      "url": "https://github.com/Tencent/ncnn",
+      "date": "2026-02-09",
+      "authors": [
+        "Tencent"
+      ],
+      "tags": [
+        "android",
+        "arm-neon",
+        "artificial-intelligence",
+        "caffe",
+        "darknet",
+        "deep-learning",
+        "high-preformance",
+        "inference",
+        "ios",
+        "keras",
+        "mlir",
+        "mxnet",
+        "ncnn",
+        "neural-network",
+        "onnx",
+        "pytorch",
+        "riscv",
+        "simd",
+        "tensorflow",
+        "vulkan"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 22766,
+      "language": "C++",
+      "forks": 4395,
+      "fullName": "Tencent/ncnn"
+    },
+    {
+      "id": "gh-mlc-ai-mlc-llm",
+      "source": "github",
+      "title": "mlc-llm",
+      "description": "Universal LLM Deployment Engine with ML Compilation",
+      "url": "https://github.com/mlc-ai/mlc-llm",
+      "date": "2026-02-09",
+      "authors": [
+        "mlc-ai"
+      ],
+      "tags": [
+        "language-model",
+        "llm",
+        "machine-learning-compilation",
+        "tvm"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 22015,
+      "language": "Python",
+      "forks": 1932,
+      "fullName": "mlc-ai/mlc-llm"
+    },
+    {
+      "id": "gh-microsoft-onnxruntime",
+      "source": "github",
+      "title": "onnxruntime",
+      "description": "ONNX Runtime: cross-platform, high performance ML inferencing and training accelerator",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "date": "2026-02-09",
+      "authors": [
+        "microsoft"
+      ],
+      "tags": [
+        "ai-framework",
+        "deep-learning",
+        "hardware-acceleration",
+        "machine-learning",
+        "neural-networks",
+        "onnx",
+        "pytorch",
+        "scikit-learn",
+        "tensorflow"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 19245,
+      "language": "C++",
+      "forks": 3692,
+      "fullName": "microsoft/onnxruntime"
+    },
+    {
+      "id": "gh-nats-io-nats-server",
+      "source": "github",
+      "title": "nats-server",
+      "description": "High-Performance server for NATS.io, the cloud and edge native messaging system.",
+      "url": "https://github.com/nats-io/nats-server",
+      "date": "2026-02-09",
+      "authors": [
+        "nats-io"
+      ],
+      "tags": [
+        "cloud",
+        "cloud-computing",
+        "cloud-native",
+        "connected-vehicle",
+        "distributed-systems",
+        "edge",
+        "edge-ai",
+        "edge-computing",
+        "go",
+        "golang",
+        "message-bus",
+        "message-queue",
+        "messaging",
+        "microservices-architecture",
+        "nats-server"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 19120,
+      "language": "Go",
+      "forks": 1729,
+      "fullName": "nats-io/nats-server"
+    },
+    {
+      "id": "gh-harvard-edge-cs249r_book",
+      "source": "github",
+      "title": "cs249r_book",
+      "description": "Introduction to Machine Learning Systems",
+      "url": "https://github.com/harvard-edge/cs249r_book",
+      "date": "2026-02-09",
+      "authors": [
+        "harvard-edge"
+      ],
+      "tags": [
+        "artificial-intelligence",
+        "cloud-ml",
+        "computer-systems",
+        "courseware",
+        "deep-learning",
+        "edge-machine-learning",
+        "embedded-ml",
+        "machine-learning",
+        "machine-learning-systems",
+        "mobile-ml",
+        "textbook",
+        "tinyml"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 17997,
+      "language": "JavaScript",
+      "forks": 2095,
+      "fullName": "harvard-edge/cs249r_book"
+    },
+    {
+      "id": "gh-mlc-ai-web-llm",
+      "source": "github",
+      "title": "web-llm",
+      "description": "High-performance In-browser LLM Inference Engine ",
+      "url": "https://github.com/mlc-ai/web-llm",
+      "date": "2026-02-09",
+      "authors": [
+        "mlc-ai"
+      ],
+      "tags": [
+        "chatgpt",
+        "deep-learning",
+        "language-model",
+        "llm",
+        "tvm",
+        "webgpu",
+        "webml"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 17263,
+      "language": "TypeScript",
+      "forks": 1192,
+      "fullName": "mlc-ai/web-llm"
+    },
+    {
+      "id": "gh-video-dev-hls.js",
+      "source": "github",
+      "title": "hls.js",
+      "description": "HLS.js is a JavaScript library that plays HLS in browsers with support for MSE.",
+      "url": "https://github.com/video-dev/hls.js",
+      "date": "2026-02-09",
+      "authors": [
+        "video-dev"
+      ],
+      "tags": [
+        "ecmascript6",
+        "hacktoberfest",
+        "hls",
+        "hlsjs",
+        "html5",
+        "http-live-streaming",
+        "javascript",
+        "mediasource",
+        "mediasource-extensions",
+        "native-hls",
+        "playback",
+        "player",
+        "stream",
+        "streaming",
+        "video",
+        "video-streaming"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 16469,
+      "language": "TypeScript",
+      "forks": 2727,
+      "fullName": "video-dev/hls.js"
+    },
+    {
+      "id": "gh-zephyrproject-rtos-zephyr",
+      "source": "github",
+      "title": "zephyr",
+      "description": "Primary Git Repository for the Zephyr Project. Zephyr is a new generation, scalable, optimized, secure RTOS for multiple hardware architectures.",
+      "url": "https://github.com/zephyrproject-rtos/zephyr",
+      "date": "2026-02-09",
+      "authors": [
+        "zephyrproject-rtos"
+      ],
+      "tags": [
+        "bluetooth",
+        "bluetooth-le",
+        "embedded",
+        "embedded-c",
+        "iot",
+        "mcu",
+        "microcontroller",
+        "real-time",
+        "rtos",
+        "zephyr",
+        "zephyr-rtos",
+        "zephyros"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 14420,
+      "language": "C",
+      "forks": 8627,
+      "fullName": "zephyrproject-rtos/zephyr"
+    },
+    {
+      "id": "gh-apache-tvm",
+      "source": "github",
+      "title": "tvm",
+      "description": "Open Machine Learning Compiler Framework",
+      "url": "https://github.com/apache/tvm",
+      "date": "2026-02-09",
+      "authors": [
+        "apache"
+      ],
+      "tags": [
+        "compiler",
+        "deep-learning",
+        "gpu",
+        "javascript",
+        "machine-learning",
+        "metal",
+        "opencl",
+        "performance",
+        "rocm",
+        "spirv",
+        "tensor",
+        "tvm",
+        "vulkan"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 13108,
+      "language": "Python",
+      "forks": 3789,
+      "fullName": "apache/tvm"
+    },
+    {
+      "id": "gh-NVIDIA-TensorRT-LLM",
+      "source": "github",
+      "title": "TensorRT-LLM",
+      "description": "TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way.",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM",
+      "date": "2026-02-09",
+      "authors": [
+        "NVIDIA"
+      ],
+      "tags": [
+        "blackwell",
+        "cuda",
+        "llm-serving",
+        "moe",
+        "pytorch"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 12847,
+      "language": "Python",
+      "forks": 2094,
+      "fullName": "NVIDIA/TensorRT-LLM"
+    },
+    {
+      "id": "gh-great-expectations-great_expectations",
+      "source": "github",
+      "title": "great_expectations",
+      "description": "Always know what to expect from your data.",
+      "url": "https://github.com/great-expectations/great_expectations",
+      "date": "2026-02-09",
+      "authors": [
+        "great-expectations"
+      ],
+      "tags": [
+        "cleandata",
+        "data-engineering",
+        "data-profilers",
+        "data-profiling",
+        "data-quality",
+        "data-science",
+        "data-unit-tests",
+        "datacleaner",
+        "datacleaning",
+        "dataquality",
+        "dataunittest",
+        "eda",
+        "exploratory-analysis",
+        "exploratory-data-analysis",
+        "exploratorydataanalysis",
+        "mlops",
+        "pipeline",
+        "pipeline-debt",
+        "pipeline-testing",
+        "pipeline-tests"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 11133,
+      "language": "Python",
+      "forks": 1677,
+      "fullName": "great-expectations/great_expectations"
+    },
+    {
+      "id": "gh-owncast-owncast",
+      "source": "github",
+      "title": "owncast",
+      "description": "Take control over your live stream video by running it yourself.  Streaming + chat out of the box.",
+      "url": "https://github.com/owncast/owncast",
+      "date": "2026-02-09",
+      "authors": [
+        "owncast"
+      ],
+      "tags": [
+        "activitypub",
+        "broadcasting",
+        "chat",
+        "decentralized",
+        "federation",
+        "fediverse",
+        "golang",
+        "hacktoberfest",
+        "hls",
+        "live",
+        "livestream",
+        "owncast",
+        "rtmp",
+        "self-hosted",
+        "streaming-video",
+        "video"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 10926,
+      "language": "Go",
+      "forks": 1176,
+      "fullName": "owncast/owncast"
+    },
+    {
+      "id": "gh-dicedb-dicedb",
+      "source": "github",
+      "title": "dicedb",
+      "description": "DiceDB is an open-source, fast, reactive, in-memory database optimized for modern hardware.",
+      "url": "https://github.com/dicedb/dicedb",
+      "date": "2026-02-09",
+      "authors": [
+        "dicedb"
+      ],
+      "tags": [
+        "database",
+        "golang",
+        "hacktoberfest",
+        "storage-engine"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 10681,
+      "language": "C",
+      "forks": 1415,
+      "fullName": "dicedb/dicedb"
+    },
+    {
+      "id": "gh-k2-fsa-sherpa-onnx",
+      "source": "github",
+      "title": "sherpa-onnx",
+      "description": "Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Internet connection. Support embedded systems, Android, iOS, HarmonyOS, Raspberry Pi, RISC-V, RK NPU, Axera NPU, Ascend NPU, x86_64 servers, websocket server/client, support 12 programming languages",
+      "url": "https://github.com/k2-fsa/sherpa-onnx",
+      "date": "2026-02-09",
+      "authors": [
+        "k2-fsa"
+      ],
+      "tags": [
+        "aarch64",
+        "android",
+        "arm32",
+        "asr",
+        "cpp",
+        "csharp",
+        "dotnet",
+        "ios",
+        "lazarus",
+        "linux",
+        "macos",
+        "mfc",
+        "object-pascal",
+        "onnx",
+        "raspberry-pi",
+        "risc-v",
+        "speech-to-text",
+        "text-to-speech",
+        "vits",
+        "windows"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 10229,
+      "language": "C++",
+      "forks": 1150,
+      "fullName": "k2-fsa/sherpa-onnx"
+    },
+    {
+      "id": "gh-openvinotoolkit-openvino",
+      "source": "github",
+      "title": "openvino",
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "date": "2026-02-09",
+      "authors": [
+        "openvinotoolkit"
+      ],
+      "tags": [
+        "ai",
+        "computer-vision",
+        "deep-learning",
+        "deploy-ai",
+        "diffusion-models",
+        "generative-ai",
+        "good-first-issue",
+        "inference",
+        "llm-inference",
+        "natural-language-processing",
+        "nlp",
+        "openvino",
+        "optimize-ai",
+        "performance-boost",
+        "recommendation-system",
+        "speech-recognition",
+        "stable-diffusion",
+        "transformers",
+        "yolo"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 9674,
+      "language": "C++",
+      "forks": 3019,
+      "fullName": "openvinotoolkit/openvino"
+    },
+    {
+      "id": "gh-skypilot-org-skypilot",
+      "source": "github",
+      "title": "skypilot",
+      "description": "Run, manage, and scale AI workloads on any AI infrastructure. Use one system to access & manage all AI compute (Kubernetes, 20+ clouds, or on-prem).",
+      "url": "https://github.com/skypilot-org/skypilot",
+      "date": "2026-02-09",
+      "authors": [
+        "skypilot-org"
+      ],
+      "tags": [
+        "cloud-computing",
+        "cloud-management",
+        "cost-management",
+        "cost-optimization",
+        "data-science",
+        "deep-learning",
+        "distributed-training",
+        "finops",
+        "gpu",
+        "hyperparameter-tuning",
+        "job-queue",
+        "job-scheduler",
+        "llm-serving",
+        "llm-training",
+        "machine-learning",
+        "ml-infrastructure",
+        "ml-platform",
+        "multicloud",
+        "spot-instances",
+        "tpu"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 9440,
+      "language": "Python",
+      "forks": 946,
+      "fullName": "skypilot-org/skypilot"
+    },
+    {
+      "id": "gh-shaka-project-shaka-player",
+      "source": "github",
+      "title": "shaka-player",
+      "description": "JavaScript player library / DASH & HLS client / MSE-EME player",
+      "url": "https://github.com/shaka-project/shaka-player",
+      "date": "2026-02-09",
+      "authors": [
+        "shaka-project"
+      ],
+      "tags": [
+        "dash",
+        "drm",
+        "encrypted-media",
+        "hls",
+        "javascript",
+        "live",
+        "live-streaming",
+        "media-source-extension",
+        "mse",
+        "offline",
+        "offline-capable",
+        "offline-mode",
+        "playback",
+        "playback-controls",
+        "video",
+        "video-playback",
+        "video-player",
+        "video-player-library",
+        "video-streaming",
+        "vod"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 7919,
+      "language": "JavaScript",
+      "forks": 1446,
+      "fullName": "shaka-project/shaka-player"
+    },
+    {
+      "id": "gh-NexaAI-nexa-sdk",
+      "source": "github",
+      "title": "nexa-sdk",
+      "description": "Run frontier LLMs and VLMs with day-0 model support across GPU, NPU, and CPU, with comprehensive runtime coverage for PC (Python/C++), mobile (Android & iOS), and Linux/IoT (Arm64 & x86 Docker). Supporting OpenAI GPT-OSS, IBM Granite-4, Qwen-3-VL, Gemma-3n, Ministral-3, and more.",
+      "url": "https://github.com/NexaAI/nexa-sdk",
+      "date": "2026-02-09",
+      "authors": [
+        "NexaAI"
+      ],
+      "tags": [
+        "gemma3",
+        "go",
+        "gpt-oss",
+        "granite4",
+        "llama",
+        "llama3",
+        "llm",
+        "on-device-ai",
+        "phi3",
+        "qwen3",
+        "qwen3vl",
+        "sdk",
+        "stable-diffusion",
+        "vlm"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 7686,
+      "language": "Kotlin",
+      "forks": 949,
+      "fullName": "NexaAI/nexa-sdk"
+    },
+    {
+      "id": "gh-clappr-clappr",
+      "source": "github",
+      "title": "clappr",
+      "description": "An extensible, plugin-oriented, HTML5-first media player for the web",
+      "url": "https://github.com/clappr/clappr",
+      "date": "2026-02-09",
+      "authors": [
+        "clappr"
+      ],
+      "tags": [
+        "clappr",
+        "dash",
+        "hls",
+        "html5-audio",
+        "html5-video",
+        "html5-video-player",
+        "javascript",
+        "mp4",
+        "player",
+        "video",
+        "video-player"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 7413,
+      "language": "JavaScript",
+      "forks": 858,
+      "fullName": "clappr/clappr"
+    },
+    {
+      "id": "gh-RunanywhereAI-runanywhere-sdks",
+      "source": "github",
+      "title": "runanywhere-sdks",
+      "description": "Production ready toolkit to run AI locally",
+      "url": "https://github.com/RunanywhereAI/runanywhere-sdks",
+      "date": "2026-02-09",
+      "authors": [
+        "RunanywhereAI"
+      ],
+      "tags": [
+        "agent-framework",
+        "android",
+        "apple-intelligence",
+        "edge",
+        "edge-ai",
+        "foundational-models",
+        "inference",
+        "ios",
+        "kotlin",
+        "llamacpp",
+        "llm",
+        "multimodal",
+        "ollama",
+        "on-device-ai",
+        "privacy",
+        "swift",
+        "voice-ai",
+        "voice-assistant"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 6693,
+      "language": "Kotlin",
+      "forks": 210,
+      "fullName": "RunanywhereAI/runanywhere-sdks"
+    },
+    {
+      "id": "gh-open-edge-platform-anomalib",
+      "source": "github",
+      "title": "anomalib",
+      "description": "An anomaly detection library comprising state-of-the-art algorithms and features such as experiment management, hyper-parameter optimization, and edge inference.",
+      "url": "https://github.com/open-edge-platform/anomalib",
+      "date": "2026-02-09",
+      "authors": [
+        "open-edge-platform"
+      ],
+      "tags": [
+        "anomaly-detection",
+        "anomaly-localization",
+        "anomaly-segmentation",
+        "geti",
+        "neural-network-compression",
+        "openvino",
+        "unsupervised-learning"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 5375,
+      "language": "Python",
+      "forks": 873,
+      "fullName": "open-edge-platform/anomalib"
+    },
+    {
+      "id": "gh-apache-ignite",
+      "source": "github",
+      "title": "ignite",
+      "description": "Apache Ignite",
+      "url": "https://github.com/apache/ignite",
+      "date": "2026-02-09",
+      "authors": [
+        "apache"
+      ],
+      "tags": [
+        "big-data",
+        "cache",
+        "cloud",
+        "data-management-platform",
+        "database",
+        "distributed-sql-database",
+        "hadoop",
+        "ignite",
+        "in-memory-computing",
+        "in-memory-database",
+        "iot",
+        "network-client",
+        "network-server",
+        "osgi",
+        "sql"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 5040,
+      "language": "Java",
+      "forks": 1930,
+      "fullName": "apache/ignite"
+    },
+    {
+      "id": "gh-inngest-inngest",
+      "source": "github",
+      "title": "inngest",
+      "description": "The leading workflow orchestration platform.  Run stateful step functions and AI workflows on serverless, servers, or the edge.",
+      "url": "https://github.com/inngest/inngest",
+      "date": "2026-02-09",
+      "authors": [
+        "inngest"
+      ],
+      "tags": [
+        "cli",
+        "event-driven",
+        "event-driven-architecture",
+        "queues",
+        "serverless",
+        "serverless-functions",
+        "workflow-engine",
+        "workflows"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 4784,
+      "language": "Go",
+      "forks": 245,
+      "fullName": "inngest/inngest"
+    },
+    {
+      "id": "gh-YosysHQ-yosys",
+      "source": "github",
+      "title": "yosys",
+      "description": "Yosys Open SYnthesis Suite",
+      "url": "https://github.com/YosysHQ/yosys",
+      "date": "2026-02-09",
+      "authors": [
+        "YosysHQ"
+      ],
+      "tags": [],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 4272,
+      "language": "C++",
+      "forks": 1035,
+      "fullName": "YosysHQ/yosys"
+    },
+    {
+      "id": "gh-pytorch-executorch",
+      "source": "github",
+      "title": "executorch",
+      "description": "On-device AI across mobile, embedded and edge for PyTorch",
+      "url": "https://github.com/pytorch/executorch",
+      "date": "2026-02-09",
+      "authors": [
+        "pytorch"
+      ],
+      "tags": [
+        "deep-learning",
+        "embedded",
+        "gpu",
+        "machine-learning",
+        "mobile",
+        "neural-network",
+        "tensor"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 4247,
+      "language": "Python",
+      "forks": 830,
+      "fullName": "pytorch/executorch"
+    },
+    {
+      "id": "gh-royshil-obs-backgroundremoval",
+      "source": "github",
+      "title": "obs-backgroundremoval",
+      "description": "An OBS plugin for removing background in portrait images (video), making it easy to replace the background when recording or streaming.",
+      "url": "https://github.com/royshil/obs-backgroundremoval",
+      "date": "2026-02-09",
+      "authors": [
+        "royshil"
+      ],
+      "tags": [
+        "background-segmentation",
+        "computer-vision",
+        "image-segmentation",
+        "libobs",
+        "mac-osx",
+        "obs",
+        "obs-plugin",
+        "obs-studio",
+        "obs-studio-plugin",
+        "obsproject",
+        "onnx",
+        "onnx-runtime",
+        "onnxruntime",
+        "onnxruntime-gpu",
+        "plugin",
+        "video-segmentation"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 4097,
+      "language": "C++",
+      "forks": 258,
+      "fullName": "royshil/obs-backgroundremoval"
+    },
+    {
+      "id": "gh-beclab-Olares",
+      "source": "github",
+      "title": "Olares",
+      "description": "Olares: An Open-Source Personal Cloud to Reclaim Your Data",
+      "url": "https://github.com/beclab/Olares",
+      "date": "2026-02-09",
+      "authors": [
+        "beclab"
+      ],
+      "tags": [
+        "ai-agents",
+        "ai-privacy",
+        "edge-ai",
+        "home-automation",
+        "home-cloud",
+        "home-server",
+        "homelab",
+        "homeserver",
+        "kubernetes",
+        "local-ai",
+        "mcp",
+        "model-serving",
+        "personal-cloud",
+        "self-hosted"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 4039,
+      "language": "Go",
+      "forks": 205,
+      "fullName": "beclab/Olares"
+    },
+    {
+      "id": "gh-nunchaku-ai-nunchaku",
+      "source": "github",
+      "title": "nunchaku",
+      "description": "[ICLR2025 Spotlight] SVDQuant: Absorbing Outliers by Low-Rank Components for 4-Bit Diffusion Models",
+      "url": "https://github.com/nunchaku-ai/nunchaku",
+      "date": "2026-02-09",
+      "authors": [
+        "nunchaku-ai"
+      ],
+      "tags": [
+        "comfyui",
+        "diffusion-models",
+        "flux",
+        "genai",
+        "iclr",
+        "iclr2025",
+        "lora",
+        "mlsys",
+        "quantization"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 3674,
+      "language": "Python",
+      "forks": 219,
+      "fullName": "nunchaku-ai/nunchaku"
+    },
+    {
+      "id": "gh-iree-org-iree",
+      "source": "github",
+      "title": "iree",
+      "description": "A retargetable MLIR-based machine learning compiler and runtime toolkit.",
+      "url": "https://github.com/iree-org/iree",
+      "date": "2026-02-09",
+      "authors": [
+        "iree-org"
+      ],
+      "tags": [
+        "compiler",
+        "cuda",
+        "jax",
+        "machine-learning",
+        "mlir",
+        "onnx",
+        "pytorch",
+        "runtime",
+        "spirv",
+        "tensorflow",
+        "vulkan"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 3595,
+      "language": "C++",
+      "forks": 835,
+      "fullName": "iree-org/iree"
+    },
+    {
+      "id": "gh-dinoki-ai-osaurus",
+      "source": "github",
+      "title": "osaurus",
+      "description": "AI edge infrastructure for macOS. Run local or cloud models, share tools across apps via MCP, and power AI workflows with a native, always-on runtime.",
+      "url": "https://github.com/dinoki-ai/osaurus",
+      "date": "2026-02-09",
+      "authors": [
+        "dinoki-ai"
+      ],
+      "tags": [
+        "anthropic",
+        "apple-foundation-models",
+        "apple-intelligence",
+        "apple-neural-engine",
+        "llm",
+        "mcp",
+        "mcp-server",
+        "mlx",
+        "openai",
+        "swift"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 3355,
+      "language": "Swift",
+      "forks": 138,
+      "fullName": "dinoki-ai/osaurus"
+    },
+    {
+      "id": "gh-huggingface-optimum",
+      "source": "github",
+      "title": "optimum",
+      "description": "🚀 Accelerate inference and training of 🤗 Transformers, Diffusers, TIMM and Sentence Transformers with easy to use hardware optimization tools",
+      "url": "https://github.com/huggingface/optimum",
+      "date": "2026-02-09",
+      "authors": [
+        "huggingface"
+      ],
+      "tags": [
+        "graphcore",
+        "habana",
+        "inference",
+        "intel",
+        "onnx",
+        "onnxruntime",
+        "optimization",
+        "pytorch",
+        "quantization",
+        "tflite",
+        "training",
+        "transformers"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 3282,
+      "language": "Python",
+      "forks": 618,
+      "fullName": "huggingface/optimum"
+    },
+    {
+      "id": "gh-gpac-gpac",
+      "source": "github",
+      "title": "gpac",
+      "description": "GPAC Ultramedia OSS for Video Streaming & Next-Gen Multimedia Transcoding, Packaging & Delivery",
+      "url": "https://github.com/gpac/gpac",
+      "date": "2026-02-09",
+      "authors": [
+        "gpac"
+      ],
+      "tags": [
+        "atsc3",
+        "broadcast",
+        "cenc",
+        "gpac",
+        "graphics",
+        "hls",
+        "low-latency-hls",
+        "mov",
+        "mp4",
+        "mp4box",
+        "mpeg-dash",
+        "mpeg-ts",
+        "prores",
+        "streaming",
+        "tiling",
+        "vr"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 3201,
+      "language": "C",
+      "forks": 580,
+      "fullName": "gpac/gpac"
+    },
+    {
+      "id": "gh-zml-zml",
+      "source": "github",
+      "title": "zml",
+      "description": "Any model. Any hardware. Zero compromise. Built with @ziglang / @openxla / MLIR / @bazelbuild",
+      "url": "https://github.com/zml/zml",
+      "date": "2026-02-09",
+      "authors": [
+        "zml"
+      ],
+      "tags": [
+        "ai",
+        "bazel",
+        "hpc",
+        "inference",
+        "xla",
+        "zig"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 3141,
+      "language": "Zig",
+      "forks": 117,
+      "fullName": "zml/zml"
+    },
+    {
+      "id": "gh-OvenMediaLabs-OvenMediaEngine",
+      "source": "github",
+      "title": "OvenMediaEngine",
+      "description": "OvenMediaEngine (OME) is a Sub-Second Latency Live Streaming Server with Large-Scale and High-Definition. #WebRTC #LLHLS",
+      "url": "https://github.com/OvenMediaLabs/OvenMediaEngine",
+      "date": "2026-02-09",
+      "authors": [
+        "OvenMediaLabs"
+      ],
+      "tags": [
+        "broadcasting",
+        "cmaf",
+        "hls",
+        "large-scale-streaming",
+        "live-streaming-server",
+        "lldash",
+        "llhls",
+        "low-latency",
+        "low-latency-dash",
+        "low-latency-hls",
+        "low-latency-http",
+        "ome",
+        "ovenmediaengine",
+        "rtmp",
+        "rtmp-to-webrtc",
+        "streaming",
+        "streaming-server",
+        "sub-second-latency",
+        "ultra-low-latency",
+        "webrtc"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 3059,
+      "language": "C++",
+      "forks": 1107,
+      "fullName": "OvenMediaLabs/OvenMediaEngine"
+    },
+    {
+      "id": "gh-google-brax",
+      "source": "github",
+      "title": "brax",
+      "description": "Massively parallel rigidbody physics simulation on accelerator hardware.",
+      "url": "https://github.com/google/brax",
+      "date": "2026-02-09",
+      "authors": [
+        "google"
+      ],
+      "tags": [
+        "jax",
+        "physics-simulation",
+        "reinforcement-learning",
+        "robotics"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 3055,
+      "language": "Jupyter Notebook",
+      "forks": 326,
+      "fullName": "google/brax"
+    },
+    {
+      "id": "gh-atopile-atopile",
+      "source": "github",
+      "title": "atopile",
+      "description": "Design circuit boards with code! ✨ Get software-like design reuse 🚀, validation, version control and collaboration in hardware; starting with electronics ⚡️",
+      "url": "https://github.com/atopile/atopile",
+      "date": "2026-02-09",
+      "authors": [
+        "atopile"
+      ],
+      "tags": [
+        "cad",
+        "eda",
+        "electronics",
+        "engineering",
+        "tools-and-automation"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 3053,
+      "language": "Python",
+      "forks": 165,
+      "fullName": "atopile/atopile"
+    },
+    {
+      "id": "gh-openvinotoolkit-openvino_notebooks",
+      "source": "github",
+      "title": "openvino_notebooks",
+      "description": "📚 Jupyter notebook tutorials for OpenVINO™",
+      "url": "https://github.com/openvinotoolkit/openvino_notebooks",
+      "date": "2026-02-09",
+      "authors": [
+        "openvinotoolkit"
+      ],
+      "tags": [
+        "computer-vision",
+        "deep-learning",
+        "inference",
+        "machine-learning",
+        "openvino"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 3035,
+      "language": "Jupyter Notebook",
+      "forks": 977,
+      "fullName": "openvinotoolkit/openvino_notebooks"
+    },
+    {
+      "id": "gh-pytorch-TensorRT",
+      "source": "github",
+      "title": "TensorRT",
+      "description": "PyTorch/TorchScript/FX compiler for NVIDIA GPUs using TensorRT",
+      "url": "https://github.com/pytorch/TensorRT",
+      "date": "2026-02-09",
+      "authors": [
+        "pytorch"
+      ],
+      "tags": [
+        "cuda",
+        "deep-learning",
+        "jetson",
+        "libtorch",
+        "machine-learning",
+        "nvidia",
+        "pytorch",
+        "tensorrt"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 2943,
+      "language": "Python",
+      "forks": 382,
+      "fullName": "pytorch/TensorRT"
+    },
+    {
+      "id": "gh-tensorflow-tflite-micro",
+      "source": "github",
+      "title": "tflite-micro",
+      "description": "Infrastructure to enable deployment of ML models to low-power resource-constrained embedded targets (including microcontrollers and digital signal processors).",
+      "url": "https://github.com/tensorflow/tflite-micro",
+      "date": "2026-02-09",
+      "authors": [
+        "tensorflow"
+      ],
+      "tags": [],
+      "matchedGroup": "edge-ai",
+      "stars": 2752,
+      "language": "C++",
+      "forks": 991,
+      "fullName": "tensorflow/tflite-micro"
+    },
+    {
+      "id": "gh-vllm-project-llm-compressor",
+      "source": "github",
+      "title": "llm-compressor",
+      "description": "Transformers-compatible library for applying various compression algorithms to LLMs for optimized deployment with vLLM",
+      "url": "https://github.com/vllm-project/llm-compressor",
+      "date": "2026-02-09",
+      "authors": [
+        "vllm-project"
+      ],
+      "tags": [
+        "compression",
+        "quantization",
+        "sparsity"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 2714,
+      "language": "Python",
+      "forks": 388,
+      "fullName": "vllm-project/llm-compressor"
+    },
+    {
+      "id": "gh-pytorch-ao",
+      "source": "github",
+      "title": "ao",
+      "description": "PyTorch native quantization and sparsity for training and inference",
+      "url": "https://github.com/pytorch/ao",
+      "date": "2026-02-09",
+      "authors": [
+        "pytorch"
+      ],
+      "tags": [
+        "brrr",
+        "cuda",
+        "dtypes",
+        "float8",
+        "inference",
+        "llama",
+        "mx",
+        "pytorch",
+        "quantization",
+        "sparsity",
+        "training",
+        "transformer"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 2669,
+      "language": "Python",
+      "forks": 425,
+      "fullName": "pytorch/ao"
+    },
+    {
+      "id": "gh-deepnote-deepnote",
+      "source": "github",
+      "title": "deepnote",
+      "description": "Deepnote is a drop-in replacement for Jupyter with an AI-first design, sleek UI, new blocks, and native data integrations. Use Python, R, and SQL locally in your favorite IDE, then scale to Deepnote cloud for real-time collaboration, Deepnote agent, and deployable data apps. https://deepnote.com/",
+      "url": "https://github.com/deepnote/deepnote",
+      "date": "2026-02-09",
+      "authors": [
+        "deepnote"
+      ],
+      "tags": [
+        "artificial-intelligence",
+        "data",
+        "data-analysis",
+        "data-science",
+        "data-visualization",
+        "deepnote",
+        "eda",
+        "jupyter",
+        "jupyterhub",
+        "jupyterlab",
+        "machine-learning",
+        "notebooks",
+        "python",
+        "r",
+        "sql"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 2633,
+      "language": "TypeScript",
+      "forks": 171,
+      "fullName": "deepnote/deepnote"
+    },
+    {
+      "id": "gh-quic-aimet",
+      "source": "github",
+      "title": "aimet",
+      "description": "AIMET is a library that provides advanced quantization and compression techniques for trained neural network models.",
+      "url": "https://github.com/quic/aimet",
+      "date": "2026-02-09",
+      "authors": [
+        "quic"
+      ],
+      "tags": [
+        "auto-ml",
+        "compression",
+        "deep-learning",
+        "deep-neural-networks",
+        "machine-learning",
+        "network-compression",
+        "network-quantization",
+        "open-source",
+        "opensource",
+        "pruning",
+        "quantization"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 2557,
+      "language": "Python",
+      "forks": 442,
+      "fullName": "quic/aimet"
+    },
+    {
+      "id": "gh-KiCad-kicad-source-mirror",
+      "source": "github",
+      "title": "kicad-source-mirror",
+      "description": "This is an active mirror of the KiCad development branch, which is hosted at GitLab (updated every time something is pushed). Pull requests on GitHub are not accepted or watched.",
+      "url": "https://github.com/KiCad/kicad-source-mirror",
+      "date": "2026-02-09",
+      "authors": [
+        "KiCad"
+      ],
+      "tags": [
+        "cad",
+        "eda",
+        "electronics",
+        "engineering",
+        "kicad",
+        "linux",
+        "macos",
+        "pcb",
+        "schematic",
+        "windows",
+        "wxwidgets"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 2511,
+      "language": "C++",
+      "forks": 592,
+      "fullName": "KiCad/kicad-source-mirror"
+    },
+    {
+      "id": "gh-The-OpenROAD-Project-OpenROAD",
+      "source": "github",
+      "title": "OpenROAD",
+      "description": "OpenROAD's unified application implementing an RTL-to-GDS Flow. Documentation at https://openroad.readthedocs.io/en/latest/",
+      "url": "https://github.com/The-OpenROAD-Project/OpenROAD",
+      "date": "2026-02-09",
+      "authors": [
+        "The-OpenROAD-Project"
+      ],
+      "tags": [
+        "cpp",
+        "def",
+        "eda",
+        "gdsii",
+        "lef",
+        "opendb-database",
+        "openroad",
+        "rtl",
+        "tcl",
+        "timing-analysis",
+        "verilog"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 2415,
+      "language": "Verilog",
+      "forks": 780,
+      "fullName": "The-OpenROAD-Project/OpenROAD"
+    },
+    {
+      "id": "gh-lemonade-sdk-lemonade",
+      "source": "github",
+      "title": "lemonade",
+      "description": "Lemonade helps users discover and run local AI apps by serving optimized LLMs right from their own GPUs and NPUs. Join our discord: https://discord.gg/5xXzkMu8Zk",
+      "url": "https://github.com/lemonade-sdk/lemonade",
+      "date": "2026-02-09",
+      "authors": [
+        "lemonade-sdk"
+      ],
+      "tags": [
+        "ai",
+        "amd",
+        "genai",
+        "gpu",
+        "llama",
+        "llm",
+        "llm-inference",
+        "local-server",
+        "mcp",
+        "mcp-server",
+        "mistral",
+        "npu",
+        "onnxruntime",
+        "openai-api",
+        "qwen",
+        "radeon",
+        "rocm",
+        "ryzen",
+        "vulkan"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 2129,
+      "language": "C++",
+      "forks": 182,
+      "fullName": "lemonade-sdk/lemonade"
+    },
+    {
+      "id": "gh-TimmyOVO-deepseek-ocr.rs",
+      "source": "github",
+      "title": "deepseek-ocr.rs",
+      "description": "Rust multi‑backend OCR/VLM engine (DeepSeek‑OCR-1/2, PaddleOCR‑VL, DotsOCR) with DSQ quantization and an OpenAI‑compatible server & CLI – run locally without Python.",
+      "url": "https://github.com/TimmyOVO/deepseek-ocr.rs",
+      "date": "2026-02-09",
+      "authors": [
+        "TimmyOVO"
+      ],
+      "tags": [
+        "candle",
+        "ocr",
+        "ocr-recognition",
+        "openai",
+        "rust"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 2121,
+      "language": "Rust",
+      "forks": 166,
+      "fullName": "TimmyOVO/deepseek-ocr.rs"
+    },
+    {
+      "id": "gh-llvm-circt",
+      "source": "github",
+      "title": "circt",
+      "description": "Circuit IR Compilers and Tools",
+      "url": "https://github.com/llvm/circt",
+      "date": "2026-02-09",
+      "authors": [
+        "llvm"
+      ],
+      "tags": [
+        "circt",
+        "llvm",
+        "mlir"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 2027,
+      "language": "C++",
+      "forks": 420,
+      "fullName": "llvm/circt"
+    },
+    {
+      "id": "gh-NVIDIA-Model-Optimizer",
+      "source": "github",
+      "title": "Model-Optimizer",
+      "description": "A unified library of SOTA model optimization techniques like quantization, pruning, distillation, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "date": "2026-02-09",
+      "authors": [
+        "NVIDIA"
+      ],
+      "tags": [],
+      "matchedGroup": "model-compression",
+      "stars": 1961,
+      "language": "Python",
+      "forks": 263,
+      "fullName": "NVIDIA/Model-Optimizer"
+    },
+    {
+      "id": "gh-fastmachinelearning-hls4ml",
+      "source": "github",
+      "title": "hls4ml",
+      "description": "Machine learning on FPGAs using HLS",
+      "url": "https://github.com/fastmachinelearning/hls4ml",
+      "date": "2026-02-09",
+      "authors": [
+        "fastmachinelearning"
+      ],
+      "tags": [
+        "fpga",
+        "hls",
+        "intel-hls",
+        "keras",
+        "machine-learning",
+        "neural-network",
+        "onnx",
+        "python",
+        "pytorch",
+        "vivado",
+        "vivado-hls"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 1785,
+      "language": "Python",
+      "forks": 516,
+      "fullName": "fastmachinelearning/hls4ml"
+    },
+    {
+      "id": "gh-llvm-torch-mlir",
+      "source": "github",
+      "title": "torch-mlir",
+      "description": "The Torch-MLIR project aims to provide first class support from the PyTorch ecosystem to the MLIR ecosystem.",
+      "url": "https://github.com/llvm/torch-mlir",
+      "date": "2026-02-09",
+      "authors": [
+        "llvm"
+      ],
+      "tags": [
+        "compiler",
+        "mlir",
+        "pytorch"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 1743,
+      "language": "C++",
+      "forks": 649,
+      "fullName": "llvm/torch-mlir"
+    },
+    {
+      "id": "gh-EnzymeAD-Enzyme",
+      "source": "github",
+      "title": "Enzyme",
+      "description": "High-performance automatic differentiation of LLVM and MLIR.",
+      "url": "https://github.com/EnzymeAD/Enzyme",
+      "date": "2026-02-09",
+      "authors": [
+        "EnzymeAD"
+      ],
+      "tags": [
+        "ad",
+        "automatic-differentiation",
+        "c",
+        "clang",
+        "compiler",
+        "cpp",
+        "deep-learning",
+        "derivative",
+        "differentiable-programming",
+        "enzyme",
+        "gradient",
+        "high-performance",
+        "llvm",
+        "llvm-enzyme",
+        "machine-learning",
+        "pytorch",
+        "rust",
+        "scientific-computing",
+        "simulation",
+        "tensorflow"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 1536,
+      "language": "LLVM",
+      "forks": 151,
+      "fullName": "EnzymeAD/Enzyme"
+    },
+    {
+      "id": "gh-google-xls",
+      "source": "github",
+      "title": "xls",
+      "description": "XLS: Accelerated HW Synthesis",
+      "url": "https://github.com/google/xls",
+      "date": "2026-02-09",
+      "authors": [
+        "google"
+      ],
+      "tags": [
+        "compiler",
+        "high-level-synthesis",
+        "hls",
+        "mid-level-synthesis",
+        "open-source",
+        "pipeline",
+        "verilog"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 1425,
+      "language": "C++",
+      "forks": 221,
+      "fullName": "google/xls"
+    },
+    {
+      "id": "gh-tscircuit-tscircuit",
+      "source": "github",
+      "title": "tscircuit",
+      "description": "Create real electronics with Typescript and React",
+      "url": "https://github.com/tscircuit/tscircuit",
+      "date": "2026-02-09",
+      "authors": [
+        "tscircuit"
+      ],
+      "tags": [
+        "cad",
+        "eda",
+        "electronics",
+        "engineering",
+        "hacktoberfest",
+        "kicad",
+        "react",
+        "typescript"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 1414,
+      "language": "TypeScript",
+      "forks": 127,
+      "fullName": "tscircuit/tscircuit"
+    },
+    {
+      "id": "gh-microsoft-ai-dev-gallery",
+      "source": "github",
+      "title": "ai-dev-gallery",
+      "description": "An open-source project for Windows developers to learn how to add AI with local models and APIs to Windows apps.",
+      "url": "https://github.com/microsoft/ai-dev-gallery",
+      "date": "2026-02-09",
+      "authors": [
+        "microsoft"
+      ],
+      "tags": [
+        "ai",
+        "csharp",
+        "developer-tools",
+        "directml",
+        "dotnet",
+        "genai",
+        "mistral",
+        "npu",
+        "onnx",
+        "onnxruntime",
+        "onnxruntime-genai",
+        "phi3",
+        "qnn",
+        "stable-diffusion",
+        "visual-studio",
+        "whisper",
+        "winappsdk",
+        "windows",
+        "winui3",
+        "wpf"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 1400,
+      "language": "C#",
+      "forks": 203,
+      "fullName": "microsoft/ai-dev-gallery"
+    },
+    {
+      "id": "gh-open-edge-platform-training_extensions",
+      "source": "github",
+      "title": "training_extensions",
+      "description": "Train, Evaluate, Optimize, Deploy Computer Vision Models via OpenVINO™",
+      "url": "https://github.com/open-edge-platform/training_extensions",
+      "date": "2026-02-09",
+      "authors": [
+        "open-edge-platform"
+      ],
+      "tags": [
+        "action-recognition",
+        "automl",
+        "computer-vision",
+        "datumaro",
+        "deep-learning",
+        "geti",
+        "hyper-parameter-optimization",
+        "image-classification",
+        "image-segmentation",
+        "incremental-learning",
+        "machine-learning",
+        "neural-networks-compression",
+        "object-detection",
+        "openvino",
+        "pytorch",
+        "quantization",
+        "self-supervised-learning",
+        "semi-supervised-learning",
+        "transfer-learning"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 1216,
+      "language": "Python",
+      "forks": 462,
+      "fullName": "open-edge-platform/training_extensions"
+    },
+    {
+      "id": "gh-verilog-to-routing-vtr-verilog-to-routing",
+      "source": "github",
+      "title": "vtr-verilog-to-routing",
+      "description": "Verilog to Routing -- Open Source CAD Flow for FPGA Research",
+      "url": "https://github.com/verilog-to-routing/vtr-verilog-to-routing",
+      "date": "2026-02-09",
+      "authors": [
+        "verilog-to-routing"
+      ],
+      "tags": [
+        "cad",
+        "eda",
+        "fpga",
+        "placement",
+        "routing",
+        "synthesis",
+        "verilog",
+        "vpr",
+        "vtr"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 1197,
+      "language": "C++",
+      "forks": 438,
+      "fullName": "verilog-to-routing/vtr-verilog-to-routing"
+    },
+    {
+      "id": "gh-kubeai-project-kubeai",
+      "source": "github",
+      "title": "kubeai",
+      "description": "AI Inference Operator for Kubernetes. The easiest way to serve ML models in production. Supports VLMs, LLMs, embeddings, and speech-to-text.",
+      "url": "https://github.com/kubeai-project/kubeai",
+      "date": "2026-02-09",
+      "authors": [
+        "kubeai-project"
+      ],
+      "tags": [
+        "ai",
+        "autoscaler",
+        "faster-whisper",
+        "inference-operator",
+        "k8s",
+        "kubernetes",
+        "llm",
+        "ollama",
+        "ollama-operator",
+        "openai-api",
+        "vllm",
+        "vllm-operator",
+        "whisper"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 1147,
+      "language": "Go",
+      "forks": 126,
+      "fullName": "kubeai-project/kubeai"
+    },
+    {
+      "id": "gh-siliconcompiler-siliconcompiler",
+      "source": "github",
+      "title": "siliconcompiler",
+      "description": "Modular hardware build system",
+      "url": "https://github.com/siliconcompiler/siliconcompiler",
+      "date": "2026-02-09",
+      "authors": [
+        "siliconcompiler"
+      ],
+      "tags": [
+        "asic",
+        "cmos",
+        "eda",
+        "fpga",
+        "hls",
+        "make",
+        "rtl",
+        "synthesis",
+        "verilog",
+        "vhdl"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 1128,
+      "language": "Python",
+      "forks": 121,
+      "fullName": "siliconcompiler/siliconcompiler"
+    },
+    {
+      "id": "gh-openvinotoolkit-nncf",
+      "source": "github",
+      "title": "nncf",
+      "description": "Neural Network Compression Framework for enhanced OpenVINO™ inference",
+      "url": "https://github.com/openvinotoolkit/nncf",
+      "date": "2026-02-09",
+      "authors": [
+        "openvinotoolkit"
+      ],
+      "tags": [
+        "bert",
+        "classification",
+        "compression",
+        "deep-learning",
+        "genai",
+        "llm",
+        "mixed-precision-training",
+        "nlp",
+        "object-detection",
+        "onnx",
+        "openvino",
+        "pruning",
+        "pytorch",
+        "quantization",
+        "quantization-aware-training",
+        "semantic-segmentation",
+        "sparsity",
+        "tensorflow",
+        "transformers"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 1125,
+      "language": "Python",
+      "forks": 281,
+      "fullName": "openvinotoolkit/nncf"
+    },
+    {
+      "id": "gh-berkeley-abc-abc",
+      "source": "github",
+      "title": "abc",
+      "description": "ABC: System for Sequential Logic Synthesis and Formal Verification",
+      "url": "https://github.com/berkeley-abc/abc",
+      "date": "2026-02-09",
+      "authors": [
+        "berkeley-abc"
+      ],
+      "tags": [],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 1117,
+      "language": "C",
+      "forks": 720,
+      "fullName": "berkeley-abc/abc"
+    },
+    {
+      "id": "gh-google-deepmind-mujoco_warp",
+      "source": "github",
+      "title": "mujoco_warp",
+      "description": "GPU-optimized version of the MuJoCo physics simulator, designed for NVIDIA hardware.",
+      "url": "https://github.com/google-deepmind/mujoco_warp",
+      "date": "2026-02-09",
+      "authors": [
+        "google-deepmind"
+      ],
+      "tags": [
+        "mujoco-warp",
+        "nvidia-warp"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 1041,
+      "language": "Python",
+      "forks": 124,
+      "fullName": "google-deepmind/mujoco_warp"
+    },
+    {
+      "id": "gh-google-research-morph-net",
+      "source": "github",
+      "title": "morph-net",
+      "description": "Fast & Simple Resource-Constrained Learning of Deep Network Structure",
+      "url": "https://github.com/google-research/morph-net",
+      "date": "2026-02-09",
+      "authors": [
+        "google-research"
+      ],
+      "tags": [
+        "automl",
+        "deep-learning",
+        "machine-learning",
+        "neural-architecture-search",
+        "python",
+        "tensorflow"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 1032,
+      "language": "Python",
+      "forks": 152,
+      "fullName": "google-research/morph-net"
+    },
+    {
+      "id": "gh-jd-opensource-xllm",
+      "source": "github",
+      "title": "xllm",
+      "description": "A high-performance inference engine for LLMs, optimized for diverse AI accelerators.",
+      "url": "https://github.com/jd-opensource/xllm",
+      "date": "2026-02-09",
+      "authors": [
+        "jd-opensource"
+      ],
+      "tags": [
+        "deepseek",
+        "inference",
+        "inference-engine",
+        "large-language-models",
+        "llm-inference",
+        "qwen"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 1022,
+      "language": "C++",
+      "forks": 140,
+      "fullName": "jd-opensource/xllm"
+    },
+    {
+      "id": "gh-ModelCloud-GPTQModel",
+      "source": "github",
+      "title": "GPTQModel",
+      "description": "LLM model quantization (compression) toolkit with hw acceleration support for Nvidia CUDA, AMD ROCm, Intel XPU and Intel/AMD/Apple CPU via HF, vLLM, and SGLang.",
+      "url": "https://github.com/ModelCloud/GPTQModel",
+      "date": "2026-02-09",
+      "authors": [
+        "ModelCloud"
+      ],
+      "tags": [
+        "gptq",
+        "optimum",
+        "peft",
+        "quantization",
+        "sglang",
+        "transformers",
+        "vllm"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 1014,
+      "language": "Python",
+      "forks": 159,
+      "fullName": "ModelCloud/GPTQModel"
+    },
+    {
+      "id": "gh-intel-auto-round",
+      "source": "github",
+      "title": "auto-round",
+      "description": "🎯An accuracy-first, highly efficient quantization toolkit for LLMs, designed to minimize quality degradation across Weight-Only Quantization, MXFP4, NVFP4, GGUF, and adaptive schemes.",
+      "url": "https://github.com/intel/auto-round",
+      "date": "2026-02-09",
+      "authors": [
+        "intel"
+      ],
+      "tags": [
+        "gguf",
+        "int4",
+        "llms",
+        "mxfp4",
+        "nvfp4",
+        "quantization",
+        "rounding",
+        "sglang",
+        "transformers",
+        "vllm",
+        "vlms"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 846,
+      "language": "Python",
+      "forks": 77,
+      "fullName": "intel/auto-round"
+    },
+    {
+      "id": "gh-sourcenetwork-defradb",
+      "source": "github",
+      "title": "defradb",
+      "description": "DefraDB is a Peer-to-Peer Edge-First Database. It's the core data storage system for the Source Ecosystem, built with IPLD, LibP2P, CRDTs, and Semantic open web properties.",
+      "url": "https://github.com/sourcenetwork/defradb",
+      "date": "2026-02-09",
+      "authors": [
+        "sourcenetwork"
+      ],
+      "tags": [
+        "crdt",
+        "database",
+        "distributed",
+        "documentdb",
+        "edge-ai",
+        "edge-compute",
+        "edge-first",
+        "graphql",
+        "linked-data",
+        "local-first-software",
+        "nosql",
+        "peer-to-peer",
+        "semantic-web"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 837,
+      "language": "Go",
+      "forks": 72,
+      "fullName": "sourcenetwork/defradb"
+    },
+    {
+      "id": "gh-openvinotoolkit-model_server",
+      "source": "github",
+      "title": "model_server",
+      "description": "A scalable inference server for models optimized with OpenVINO™",
+      "url": "https://github.com/openvinotoolkit/model_server",
+      "date": "2026-02-09",
+      "authors": [
+        "openvinotoolkit"
+      ],
+      "tags": [
+        "ai",
+        "cloud",
+        "dag",
+        "deep-learning",
+        "edge",
+        "genai",
+        "inference",
+        "kubernetes",
+        "machine-learning",
+        "model-serving",
+        "openvino",
+        "serving"
+      ],
+      "matchedGroup": "frameworks",
+      "stars": 825,
+      "language": "C++",
+      "forks": 238,
+      "fullName": "openvinotoolkit/model_server"
+    },
+    {
+      "id": "gh-norse-norse",
+      "source": "github",
+      "title": "norse",
+      "description": "Deep learning with spiking neural networks (SNNs) in PyTorch.",
+      "url": "https://github.com/norse/norse",
+      "date": "2026-02-09",
+      "authors": [
+        "norse"
+      ],
+      "tags": [
+        "autograd",
+        "deep-learning",
+        "gpu",
+        "machine-learning",
+        "neural-network",
+        "neuromorphic",
+        "pytorch",
+        "pytorch-lightning",
+        "spiking-neural-networks",
+        "tensor"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 787,
+      "language": "Python",
+      "forks": 97,
+      "fullName": "norse/norse"
+    },
+    {
+      "id": "gh-Opencode-DCP-opencode-dynamic-context-pruning",
+      "source": "github",
+      "title": "opencode-dynamic-context-pruning",
+      "description": "Dynamic context pruning plugin for OpenCode - intelligently manages conversation context to optimize token usage",
+      "url": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+      "date": "2026-02-09",
+      "authors": [
+        "Opencode-DCP"
+      ],
+      "tags": [],
+      "matchedGroup": "model-compression",
+      "stars": 764,
+      "language": "TypeScript",
+      "forks": 53,
+      "fullName": "Opencode-DCP/opencode-dynamic-context-pruning"
+    },
+    {
+      "id": "gh-pytorch-helion",
+      "source": "github",
+      "title": "helion",
+      "description": "A Python-embedded DSL that makes it easy to write fast, scalable ML kernels with minimal boilerplate.",
+      "url": "https://github.com/pytorch/helion",
+      "date": "2026-02-09",
+      "authors": [
+        "pytorch"
+      ],
+      "tags": [],
+      "matchedGroup": "edge-ai",
+      "stars": 744,
+      "language": "Python",
+      "forks": 103,
+      "fullName": "pytorch/helion"
+    },
+    {
+      "id": "gh-nobodywho-ooo-nobodywho",
+      "source": "github",
+      "title": "nobodywho",
+      "description": "NobodyWho is an inference engine that lets you run LLMs locally and efficiently on any device.  ",
+      "url": "https://github.com/nobodywho-ooo/nobodywho",
+      "date": "2026-02-09",
+      "authors": [
+        "nobodywho-ooo"
+      ],
+      "tags": [
+        "godot",
+        "godot-engine",
+        "godot-plugin",
+        "godot4",
+        "inference-engine",
+        "llm",
+        "python",
+        "python-llm",
+        "slm"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 699,
+      "language": "Rust",
+      "forks": 34,
+      "fullName": "nobodywho-ooo/nobodywho"
+    },
+    {
+      "id": "gh-LuxDL-Lux.jl",
+      "source": "github",
+      "title": "Lux.jl",
+      "description": "Elegant and Performant Deep Learning",
+      "url": "https://github.com/LuxDL/Lux.jl",
+      "date": "2026-02-09",
+      "authors": [
+        "LuxDL"
+      ],
+      "tags": [
+        "deep-learning",
+        "gpu",
+        "machine-learning",
+        "neural-networks",
+        "scientific-machine-learning",
+        "tpu",
+        "xla"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 674,
+      "language": "Julia",
+      "forks": 83,
+      "fullName": "LuxDL/Lux.jl"
+    },
+    {
+      "id": "gh-lablup-backend.ai",
+      "source": "github",
+      "title": "backend.ai",
+      "description": "Backend.AI is a streamlined, container-based computing cluster platform that hosts popular computing/ML frameworks and diverse programming languages, with pluggable heterogeneous accelerator support including CUDA GPU, ROCm GPU, Gaudi NPU, Google TPU, GraphCore IPU and other NPUs.",
+      "url": "https://github.com/lablup/backend.ai",
+      "date": "2026-02-09",
+      "authors": [
+        "lablup"
+      ],
+      "tags": [
+        "api",
+        "backendai",
+        "cloud-computing",
+        "containers",
+        "distributed-computing",
+        "docker",
+        "documentation",
+        "hpc",
+        "monitoring",
+        "paas",
+        "python"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 611,
+      "language": "Python",
+      "forks": 164,
+      "fullName": "lablup/backend.ai"
+    },
+    {
+      "id": "gh-huawei-csl-SINQ",
+      "source": "github",
+      "title": "SINQ",
+      "description": "Welcome to the official repository of SINQ! A novel, fast and high-quality quantization method designed to make any Large Language Model smaller while preserving accuracy.",
+      "url": "https://github.com/huawei-csl/SINQ",
+      "date": "2026-02-09",
+      "authors": [
+        "huawei-csl"
+      ],
+      "tags": [
+        "ai",
+        "huawei",
+        "large-language-models",
+        "quantization"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 592,
+      "language": "Python",
+      "forks": 49,
+      "fullName": "huawei-csl/SINQ"
+    },
+    {
+      "id": "gh-Xilinx-mlir-aie",
+      "source": "github",
+      "title": "mlir-aie",
+      "description": "An MLIR-based toolchain for AMD AI Engine-enabled devices.",
+      "url": "https://github.com/Xilinx/mlir-aie",
+      "date": "2026-02-09",
+      "authors": [
+        "Xilinx"
+      ],
+      "tags": [
+        "iron",
+        "llvm",
+        "mlir",
+        "npu",
+        "python"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 582,
+      "language": "C",
+      "forks": 168,
+      "fullName": "Xilinx/mlir-aie"
+    },
+    {
+      "id": "gh-spcl-dace",
+      "source": "github",
+      "title": "dace",
+      "description": "DaCe - Data Centric Parallel Programming",
+      "url": "https://github.com/spcl/dace",
+      "date": "2026-02-09",
+      "authors": [
+        "spcl"
+      ],
+      "tags": [
+        "cuda",
+        "fpga",
+        "high-level-synthesis",
+        "high-performance-computing",
+        "programming-language",
+        "vivado-hls"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 573,
+      "language": "Python",
+      "forks": 149,
+      "fullName": "spcl/dace"
+    },
+    {
+      "id": "gh-The-OpenROAD-Project-OpenROAD-flow-scripts",
+      "source": "github",
+      "title": "OpenROAD-flow-scripts",
+      "description": "OpenROAD's scripts implementing an RTL-to-GDS Flow. Documentation at https://openroad-flow-scripts.readthedocs.io/en/latest/",
+      "url": "https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts",
+      "date": "2026-02-09",
+      "authors": [
+        "The-OpenROAD-Project"
+      ],
+      "tags": [
+        "def",
+        "eda",
+        "gdsii",
+        "lef",
+        "opendb-database",
+        "openroad",
+        "rtl",
+        "tcl",
+        "timing-analysis",
+        "verilog"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 561,
+      "language": "Verilog",
+      "forks": 427,
+      "fullName": "The-OpenROAD-Project/OpenROAD-flow-scripts"
+    },
+    {
+      "id": "gh-huggingface-optimum-intel",
+      "source": "github",
+      "title": "optimum-intel",
+      "description": "🤗 Optimum Intel: Accelerate inference with Intel optimization tools",
+      "url": "https://github.com/huggingface/optimum-intel",
+      "date": "2026-02-09",
+      "authors": [
+        "huggingface"
+      ],
+      "tags": [
+        "diffusers",
+        "distillation",
+        "inference",
+        "intel",
+        "onnx",
+        "openvino",
+        "optimization",
+        "pruning",
+        "quantization",
+        "transformers"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 531,
+      "language": "Jupyter Notebook",
+      "forks": 188,
+      "fullName": "huggingface/optimum-intel"
+    },
+    {
+      "id": "gh-Ascend-pytorch",
+      "source": "github",
+      "title": "pytorch",
+      "description": "Ascend PyTorch adapter (torch_npu). Mirror of https://gitee.com/ascend/pytorch",
+      "url": "https://github.com/Ascend/pytorch",
+      "date": "2026-02-09",
+      "authors": [
+        "Ascend"
+      ],
+      "tags": [
+        "ascend",
+        "deep-learning",
+        "pytorch"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 486,
+      "language": "Python",
+      "forks": 42,
+      "fullName": "Ascend/pytorch"
+    },
+    {
+      "id": "gh-stillwater-sc-universal",
+      "source": "github",
+      "title": "universal",
+      "description": "Large collection of number systems providing custom arithmetic for mixed-precision algorithm development and optimization for AI, Machine Learning, Computer Vision, Signal Processing, CAE, EDA, control, optimization, estimation, and approximation.",
+      "url": "https://github.com/stillwater-sc/universal",
+      "date": "2026-02-09",
+      "authors": [
+        "stillwater-sc"
+      ],
+      "tags": [
+        "arbitrary-precision",
+        "arbitrary-precision-arithmetic",
+        "arbitrary-precision-floats",
+        "arbitrary-precision-integers",
+        "arithmetic",
+        "artificial-intelligence",
+        "c-plus-plus",
+        "digital-signal-processing",
+        "embedded-systems",
+        "fixed-point-arithmetic",
+        "floating-point-arithmetic",
+        "half-precision",
+        "integer-arithmetic",
+        "interval-arithmetic",
+        "octa-precision",
+        "posit-arithmetic",
+        "quad-precision",
+        "quarter-precision",
+        "rational-arithmetic"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 485,
+      "language": "C++",
+      "forks": 68,
+      "fullName": "stillwater-sc/universal"
+    },
+    {
+      "id": "gh-lmk123568-StreamUI",
+      "source": "github",
+      "title": "StreamUI",
+      "description": "A minimal and lightweight video streaming management platform 一个极简轻量的视频流媒体管理平台",
+      "url": "https://github.com/lmk123568/StreamUI",
+      "date": "2026-02-09",
+      "authors": [
+        "lmk123568"
+      ],
+      "tags": [
+        "flv",
+        "fmp4",
+        "hls",
+        "nvr",
+        "rtmp",
+        "rtsp",
+        "stream",
+        "ts",
+        "video",
+        "webrtc",
+        "zlmediakit"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 446,
+      "language": "HTML",
+      "forks": 81,
+      "fullName": "lmk123568/StreamUI"
+    },
+    {
+      "id": "gh-OEvortex-Webscout",
+      "source": "github",
+      "title": "Webscout",
+      "description": "Webscout is the all-in-one search and AI toolkit you need. Discover insights with Yep.com, DuckDuckGo, and Phind; access cutting-edge AI models; transcribe YouTube videos; generate temporary emails and phone numbers; perform text-to-speech conversions; and much more!",
+      "url": "https://github.com/OEvortex/Webscout",
+      "date": "2026-02-09",
+      "authors": [
+        "OEvortex"
+      ],
+      "tags": [
+        "ai",
+        "chatgpt-free",
+        "deepseek-r1",
+        "free",
+        "freeai",
+        "freegpt4",
+        "gguf",
+        "llamacpp",
+        "ml",
+        "openai",
+        "openinterpreter",
+        "python",
+        "tempnumber",
+        "text-generation",
+        "websearch",
+        "youtube",
+        "youtube-api"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 321,
+      "language": "Python",
+      "forks": 61,
+      "fullName": "OEvortex/Webscout"
+    },
+    {
+      "id": "gh-Tencent-AngelSlim",
+      "source": "github",
+      "title": "AngelSlim",
+      "description": "Model compression toolkit engineered for enhanced usability, comprehensiveness, and efficiency.",
+      "url": "https://github.com/Tencent/AngelSlim",
+      "date": "2026-02-09",
+      "authors": [
+        "Tencent"
+      ],
+      "tags": [
+        "audio",
+        "deepseek",
+        "diffusion",
+        "eagle",
+        "fp4",
+        "hunyuan",
+        "llm",
+        "llm-compression",
+        "quantization",
+        "qwen",
+        "speculative-decoding",
+        "vlm"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 317,
+      "language": "Python",
+      "forks": 39,
+      "fullName": "Tencent/AngelSlim"
+    },
+    {
+      "id": "gh-apache-ignite-3",
+      "source": "github",
+      "title": "ignite-3",
+      "description": "Apache Ignite 3",
+      "url": "https://github.com/apache/ignite-3",
+      "date": "2026-02-09",
+      "authors": [
+        "apache"
+      ],
+      "tags": [
+        "big-data",
+        "cache",
+        "cloud",
+        "data-management-platform",
+        "database",
+        "distributed-sql-database",
+        "ignite",
+        "in-memory-computing",
+        "in-memory-database",
+        "iot",
+        "network-client",
+        "network-server",
+        "sql"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 305,
+      "language": "Java",
+      "forks": 135,
+      "fullName": "apache/ignite-3"
+    },
+    {
+      "id": "gh-EnzymeAD-Reactant.jl",
+      "source": "github",
+      "title": "Reactant.jl",
+      "description": "Optimize Julia Functions With MLIR and XLA for High-Performance Execution on CPU, GPU, TPU and more.",
+      "url": "https://github.com/EnzymeAD/Reactant.jl",
+      "date": "2026-02-09",
+      "authors": [
+        "EnzymeAD"
+      ],
+      "tags": [],
+      "matchedGroup": "accelerators",
+      "stars": 295,
+      "language": "Julia",
+      "forks": 49,
+      "fullName": "EnzymeAD/Reactant.jl"
+    },
+    {
+      "id": "gh-ztachip-ztachip",
+      "source": "github",
+      "title": "ztachip",
+      "description": "Opensource software/hardware platform to build edge AI solutions deployed on FPGA or custom ASIC hardware.",
+      "url": "https://github.com/ztachip/ztachip",
+      "date": "2026-02-09",
+      "authors": [
+        "ztachip"
+      ],
+      "tags": [],
+      "matchedGroup": "edge-ai",
+      "stars": 287,
+      "language": "VHDL",
+      "forks": 46,
+      "fullName": "ztachip/ztachip"
+    },
+    {
+      "id": "gh-librelane-librelane",
+      "source": "github",
+      "title": "librelane",
+      "description": "ASIC implementation flow infrastructure, successor to OpenLane",
+      "url": "https://github.com/librelane/librelane",
+      "date": "2026-02-09",
+      "authors": [
+        "librelane"
+      ],
+      "tags": [
+        "asic",
+        "asic-design",
+        "chip-design",
+        "digital-design",
+        "eda",
+        "electronic-design-automation",
+        "librelane",
+        "openlane"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 283,
+      "language": "Python",
+      "forks": 46,
+      "fullName": "librelane/librelane"
+    },
+    {
+      "id": "gh-Bears-R-Us-arkouda",
+      "source": "github",
+      "title": "arkouda",
+      "description": "Arkouda (αρκούδα): Interactive Data Analytics at Supercomputing Scale :bear:",
+      "url": "https://github.com/Bears-R-Us/arkouda",
+      "date": "2026-02-09",
+      "authors": [
+        "Bears-R-Us"
+      ],
+      "tags": [
+        "chapel",
+        "data",
+        "data-analysis",
+        "data-science",
+        "distributed-computing",
+        "eda",
+        "hpc",
+        "python"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 275,
+      "language": "Python",
+      "forks": 97,
+      "fullName": "Bears-R-Us/arkouda"
+    },
+    {
+      "id": "gh-sophgo-LLM-TPU",
+      "source": "github",
+      "title": "LLM-TPU",
+      "description": "Run generative AI models in sophgo BM1684X/BM1688",
+      "url": "https://github.com/sophgo/LLM-TPU",
+      "date": "2026-02-09",
+      "authors": [
+        "sophgo"
+      ],
+      "tags": [
+        "bm1684x",
+        "bm1688",
+        "generative-ai",
+        "internvl3",
+        "large-language-models",
+        "llama3",
+        "llm",
+        "llm-inference",
+        "qwen2-5-vl",
+        "qwen3",
+        "qwen3-vl"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 266,
+      "language": "C++",
+      "forks": 46,
+      "fullName": "sophgo/LLM-TPU"
+    },
+    {
+      "id": "gh-lepton-eda-lepton-eda",
+      "source": "github",
+      "title": "lepton-eda",
+      "description": "GPL Electronic Design Automation",
+      "url": "https://github.com/lepton-eda/lepton-eda",
+      "date": "2026-02-09",
+      "authors": [
+        "lepton-eda"
+      ],
+      "tags": [
+        "c",
+        "cad",
+        "circuit",
+        "design-tools",
+        "electronics",
+        "geda",
+        "gpl",
+        "guile"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 251,
+      "language": "C",
+      "forks": 41,
+      "fullName": "lepton-eda/lepton-eda"
+    },
+    {
+      "id": "gh-ModelEngine-Group-unified-cache-management",
+      "source": "github",
+      "title": "unified-cache-management",
+      "description": "Persist and reuse KV Cache to speedup your LLM.",
+      "url": "https://github.com/ModelEngine-Group/unified-cache-management",
+      "date": "2026-02-09",
+      "authors": [
+        "ModelEngine-Group"
+      ],
+      "tags": [
+        "ascend",
+        "cuda",
+        "deepseek",
+        "dram",
+        "gpu",
+        "hbm",
+        "kvcache",
+        "llm",
+        "nfs",
+        "npu",
+        "ssd",
+        "torch",
+        "ucm",
+        "vllm"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 249,
+      "language": "Python",
+      "forks": 62,
+      "fullName": "ModelEngine-Group/unified-cache-management"
+    },
+    {
+      "id": "gh-vllm-project-compressed-tensors",
+      "source": "github",
+      "title": "compressed-tensors",
+      "description": "A safetensors extension to efficiently store sparse quantized tensors on disk",
+      "url": "https://github.com/vllm-project/compressed-tensors",
+      "date": "2026-02-09",
+      "authors": [
+        "vllm-project"
+      ],
+      "tags": [],
+      "matchedGroup": "model-compression",
+      "stars": 242,
+      "language": "Python",
+      "forks": 56,
+      "fullName": "vllm-project/compressed-tensors"
+    },
+    {
+      "id": "gh-vllm-project-tpu-inference",
+      "source": "github",
+      "title": "tpu-inference",
+      "description": "TPU inference for vLLM, with unified JAX and PyTorch support.",
+      "url": "https://github.com/vllm-project/tpu-inference",
+      "date": "2026-02-09",
+      "authors": [
+        "vllm-project"
+      ],
+      "tags": [],
+      "matchedGroup": "accelerators",
+      "stars": 230,
+      "language": "Python",
+      "forks": 96,
+      "fullName": "vllm-project/tpu-inference"
+    },
+    {
+      "id": "gh-microsoft-hlsl-specs",
+      "source": "github",
+      "title": "hlsl-specs",
+      "description": "HLSL Specifications",
+      "url": "https://github.com/microsoft/hlsl-specs",
+      "date": "2026-02-09",
+      "authors": [
+        "microsoft"
+      ],
+      "tags": [],
+      "matchedGroup": "optimization",
+      "stars": 215,
+      "language": "TeX",
+      "forks": 56,
+      "fullName": "microsoft/hlsl-specs"
+    },
+    {
+      "id": "gh-jortilles-EDA",
+      "source": "github",
+      "title": "EDA",
+      "description": "Edalitcs",
+      "url": "https://github.com/jortilles/EDA",
+      "date": "2026-02-09",
+      "authors": [
+        "jortilles"
+      ],
+      "tags": [
+        "analytics",
+        "business-analytics",
+        "business-intelligence",
+        "data-visualization"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 178,
+      "language": "TypeScript",
+      "forks": 25,
+      "fullName": "jortilles/EDA"
+    },
+    {
+      "id": "gh-AI-Hypercomputer-xpk",
+      "source": "github",
+      "title": "xpk",
+      "description": "xpk (Accelerated Processing Kit, pronounced x-p-k,) is a software tool to help Cloud developers to orchestrate training jobs on accelerators such as TPUs and GPUs on GKE.",
+      "url": "https://github.com/AI-Hypercomputer/xpk",
+      "date": "2026-02-09",
+      "authors": [
+        "AI-Hypercomputer"
+      ],
+      "tags": [
+        "gcloud",
+        "gke",
+        "tpu"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 169,
+      "language": "Python",
+      "forks": 74,
+      "fullName": "AI-Hypercomputer/xpk"
+    },
+    {
+      "id": "gh-arc-research-lab-CHARM",
+      "source": "github",
+      "title": "CHARM",
+      "description": "CHARM: Composing Heterogeneous Accelerators on Heterogeneous SoC Architecture",
+      "url": "https://github.com/arc-research-lab/CHARM",
+      "date": "2026-02-09",
+      "authors": [
+        "arc-research-lab"
+      ],
+      "tags": [
+        "acap",
+        "deeplearning",
+        "design-space-exploration",
+        "domain-specific-architecture",
+        "electronic-design-automation",
+        "fpga",
+        "heterogeneous-computing",
+        "high-level-synthesis",
+        "versal",
+        "versalacap"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 163,
+      "language": "C++",
+      "forks": 23,
+      "fullName": "arc-research-lab/CHARM"
+    },
+    {
+      "id": "gh-NVlabs-queen",
+      "source": "github",
+      "title": "queen",
+      "description": "Official PyTorch implementation of QUEEN: QUantized Efficient ENcoding of Dynamic Gaussians for Streaming Free-viewpoint Videos (NeurIPS 2024)",
+      "url": "https://github.com/NVlabs/queen",
+      "date": "2026-02-09",
+      "authors": [
+        "NVlabs"
+      ],
+      "tags": [
+        "3d-gaussian-splatting",
+        "3d-video",
+        "3dgs",
+        "4d-gaussian-splatting",
+        "4d-reconstruction",
+        "4dgs",
+        "computer-graphics",
+        "computer-vision",
+        "dynamic-scene",
+        "free-viewpoint-video",
+        "gaussian-splatting",
+        "novel-view-synthesis",
+        "radiance-field"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 163,
+      "language": "C++",
+      "forks": 15,
+      "fullName": "NVlabs/queen"
+    },
+    {
+      "id": "gh-neuromorphs-NIR",
+      "source": "github",
+      "title": "NIR",
+      "description": "Neuromorphic Intermediate Representation reference implementation",
+      "url": "https://github.com/neuromorphs/NIR",
+      "date": "2026-02-09",
+      "authors": [
+        "neuromorphs"
+      ],
+      "tags": [
+        "machine-learning",
+        "neuromorphic"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 147,
+      "language": "Jupyter Notebook",
+      "forks": 31,
+      "fullName": "neuromorphs/NIR"
+    },
+    {
+      "id": "gh-EMI-Group-evoxbench",
+      "source": "github",
+      "title": "evoxbench",
+      "description": "Transforming Neural Architecture Search (NAS) into multi-objective optimization problems. A benchmark suite for testing evolutionary algorithms in deep learning.",
+      "url": "https://github.com/EMI-Group/evoxbench",
+      "date": "2026-02-09",
+      "authors": [
+        "EMI-Group"
+      ],
+      "tags": [
+        "evolutionary-algorithms",
+        "evolutionary-computation",
+        "multi-objective-optimization",
+        "nasbench",
+        "neural-architecture-search"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 138,
+      "language": "Python",
+      "forks": 18,
+      "fullName": "EMI-Group/evoxbench"
+    },
+    {
+      "id": "gh-kaltura-kaltura-player-js",
+      "source": "github",
+      "title": "kaltura-player-js",
+      "description": "Kaltura Player JS Platform - Cloud TV and OVP Media Players",
+      "url": "https://github.com/kaltura/kaltura-player-js",
+      "date": "2026-02-09",
+      "authors": [
+        "kaltura"
+      ],
+      "tags": [
+        "accessible-video",
+        "cloud-tv",
+        "cross-platform-video-player",
+        "es6",
+        "flow-typed",
+        "hls",
+        "kaltura",
+        "kaltura-player",
+        "media-player",
+        "ovp-media-players",
+        "player",
+        "playkit-js",
+        "video-player"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 138,
+      "language": "TypeScript",
+      "forks": 51,
+      "fullName": "kaltura/kaltura-player-js"
+    },
+    {
+      "id": "gh-asyncvlsi-act",
+      "source": "github",
+      "title": "act",
+      "description": "ACT hardware description language and core tools.",
+      "url": "https://github.com/asyncvlsi/act",
+      "date": "2026-02-09",
+      "authors": [
+        "asyncvlsi"
+      ],
+      "tags": [
+        "asynchronous-circuits",
+        "asynchronous-vlsi",
+        "cad",
+        "chp",
+        "circuit-simulator",
+        "communicating-hardware-processes",
+        "dataflow",
+        "dataflow-programming",
+        "design-automation",
+        "eda",
+        "hardware-description-language",
+        "hdl",
+        "language",
+        "production-rules",
+        "prs",
+        "vlsi",
+        "vlsi-cad"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 124,
+      "language": "C++",
+      "forks": 27,
+      "fullName": "asyncvlsi/act"
+    },
+    {
+      "id": "gh-open-edge-platform-edge-ai-libraries",
+      "source": "github",
+      "title": "edge-ai-libraries",
+      "description": "Performance optimized libraries, microservices, and tools to support the development of Edge AI applications.",
+      "url": "https://github.com/open-edge-platform/edge-ai-libraries",
+      "date": "2026-02-09",
+      "authors": [
+        "open-edge-platform"
+      ],
+      "tags": [
+        "libraries",
+        "microservices",
+        "samples",
+        "tools"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 118,
+      "language": "Python",
+      "forks": 87,
+      "fullName": "open-edge-platform/edge-ai-libraries"
+    },
+    {
+      "id": "gh-opensensor-lightNVR",
+      "source": "github",
+      "title": "lightNVR",
+      "description": "lightweight Linux based NVR system",
+      "url": "https://github.com/opensensor/lightNVR",
+      "date": "2026-02-09",
+      "authors": [
+        "opensensor"
+      ],
+      "tags": [
+        "hls",
+        "ipcamera",
+        "network-video-recorder",
+        "nvr",
+        "object-detection",
+        "rtsp",
+        "sod",
+        "tflite",
+        "webrtc"
+      ],
+      "matchedGroup": "optimization",
+      "stars": 110,
+      "language": "C",
+      "forks": 25,
+      "fullName": "opensensor/lightNVR"
+    },
+    {
+      "id": "gh-omni-ai-npu-omni-infer",
+      "source": "github",
+      "title": "omni-infer",
+      "description": "Omni_Infer is a suite of inference accelerators designed for the Ascend NPU platform, offering native support and an expanding feature set.",
+      "url": "https://github.com/omni-ai-npu/omni-infer",
+      "date": "2026-02-09",
+      "authors": [
+        "omni-ai-npu"
+      ],
+      "tags": [],
+      "matchedGroup": "accelerators",
+      "stars": 104,
+      "language": "Python",
+      "forks": 16,
+      "fullName": "omni-ai-npu/omni-infer"
+    },
+    {
+      "id": "gh-datarobot-community-ai-accelerators",
+      "source": "github",
+      "title": "ai-accelerators",
+      "description": "",
+      "url": "https://github.com/datarobot-community/ai-accelerators",
+      "date": "2026-02-09",
+      "authors": [
+        "datarobot-community"
+      ],
+      "tags": [
+        "dr-engineering"
+      ],
+      "matchedGroup": "accelerators",
+      "stars": 95,
+      "language": "Jupyter Notebook",
+      "forks": 38,
+      "fullName": "datarobot-community/ai-accelerators"
+    },
+    {
+      "id": "gh-ansible-eda-server",
+      "source": "github",
+      "title": "eda-server",
+      "description": " Event Driven Ansible for AAP",
+      "url": "https://github.com/ansible/eda-server",
+      "date": "2026-02-09",
+      "authors": [
+        "ansible"
+      ],
+      "tags": [],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 89,
+      "language": "Python",
+      "forks": 61,
+      "fullName": "ansible/eda-server"
+    },
+    {
+      "id": "gh-cda-tum-fiction",
+      "source": "github",
+      "title": "fiction",
+      "description": "An open-source design automation framework for Field-coupled Nanotechnologies",
+      "url": "https://github.com/cda-tum/fiction",
+      "date": "2026-02-09",
+      "authors": [
+        "cda-tum"
+      ],
+      "tags": [
+        "clocking",
+        "eda",
+        "emerging-tech",
+        "fcn",
+        "layout",
+        "logic-synthesis",
+        "nanocomputing",
+        "nml",
+        "placement",
+        "qca",
+        "routing",
+        "sidb",
+        "simulation",
+        "verification"
+      ],
+      "matchedGroup": "synthesis-pnr",
+      "stars": 86,
+      "language": "C++",
+      "forks": 30,
+      "fullName": "cda-tum/fiction"
+    },
+    {
+      "id": "gh-open-edge-platform-edge-ai-suites",
+      "source": "github",
+      "title": "edge-ai-suites",
+      "description": "Curated collections of sample applications designed to help you develop optimized AI solutions. Tailored to specific use cases, covering retail, manufacturing, metro, and media & entertainment.",
+      "url": "https://github.com/open-edge-platform/edge-ai-suites",
+      "date": "2026-02-09",
+      "authors": [
+        "open-edge-platform"
+      ],
+      "tags": [
+        "manufacturing-ai-suite",
+        "media-and-entertainment-ai-suite",
+        "metro-ai-suite",
+        "retail-ai-suite",
+        "robotics-ai-suite"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 84,
+      "language": "Jupyter Notebook",
+      "forks": 88,
+      "fullName": "open-edge-platform/edge-ai-suites"
+    },
+    {
+      "id": "gh-gauravfs-14-awesome-tinyml",
+      "source": "github",
+      "title": "awesome-tinyml",
+      "description": "A carefully curated collection of high-quality libraries, projects, tutorials, research papers, and other essential resources focused on TinyML — the intersection of machine learning and ultra-low-power embedded systems.",
+      "url": "https://github.com/gauravfs-14/awesome-tinyml",
+      "date": "2026-02-09",
+      "authors": [
+        "gauravfs-14"
+      ],
+      "tags": [
+        "machine-learning",
+        "tiny-machine-learnig",
+        "tinyml"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 64,
+      "language": "JavaScript",
+      "forks": 4,
+      "fullName": "gauravfs-14/awesome-tinyml"
+    },
+    {
+      "id": "gh-2404589803-hf-daily-paper-newsletter-chinese",
+      "source": "github",
+      "title": "hf-daily-paper-newsletter-chinese",
+      "description": "🔥Your Daily Dose of AI Research from Hugging Face 🔥  Stay updated with the latest AI breakthroughs! This bot automatically collects and analyzes papers from 🤗 Hugging Face's daily papers, providing Chinese translations and AI-powered interpretations. Powered by state-of-the-art language models, it brings cutting-edge research to your finger",
+      "url": "https://github.com/2404589803/hf-daily-paper-newsletter-chinese",
+      "date": "2026-02-09",
+      "authors": [
+        "2404589803"
+      ],
+      "tags": [],
+      "matchedGroup": "edge-ai",
+      "stars": 56,
+      "language": "HTML",
+      "forks": 10,
+      "fullName": "2404589803/hf-daily-paper-newsletter-chinese"
+    },
+    {
+      "id": "gh-Dengyu-Wu-neuromorphics-daily-arxiv",
+      "source": "github",
+      "title": "neuromorphics-daily-arxiv",
+      "description": "Neuromorphic paper list, automatically updating everyday at 8:00 am GMT.",
+      "url": "https://github.com/Dengyu-Wu/neuromorphics-daily-arxiv",
+      "date": "2026-02-09",
+      "authors": [
+        "Dengyu-Wu"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 51,
+      "language": "Python",
+      "forks": 2,
+      "fullName": "Dengyu-Wu/neuromorphics-daily-arxiv"
+    },
+    {
+      "id": "gh-microsoft-edge-ai",
+      "source": "github",
+      "title": "edge-ai",
+      "description": "Production-ready Infrastructure as Code, applications, pluggable components, and PlatformOps toolchains that empower organizations to achieve more with cloud and edge AI-powered solutions. Built by friendly geeks, for every team that needs edge solutions to achieve real production results.",
+      "url": "https://github.com/microsoft/edge-ai",
+      "date": "2026-02-09",
+      "authors": [
+        "microsoft"
+      ],
+      "tags": [],
+      "matchedGroup": "edge-ai",
+      "stars": 43,
+      "language": "HCL",
+      "forks": 20,
+      "fullName": "microsoft/edge-ai"
+    },
+    {
+      "id": "gh-qdrant-qdrant-edge-demo",
+      "source": "github",
+      "title": "qdrant-edge-demo",
+      "description": "POC visual search with smart glasses and Qdrant Edge.",
+      "url": "https://github.com/qdrant/qdrant-edge-demo",
+      "date": "2026-02-09",
+      "authors": [
+        "qdrant"
+      ],
+      "tags": [
+        "ai-memory",
+        "ai-memory-system",
+        "edge",
+        "edge-ai",
+        "embedded-ai",
+        "vector-database",
+        "vector-search"
+      ],
+      "matchedGroup": "edge-ai",
+      "stars": 43,
+      "language": "Python",
+      "forks": 2,
+      "fullName": "qdrant/qdrant-edge-demo"
+    },
+    {
+      "id": "gh-electronicvisions-jaxsnn",
+      "source": "github",
+      "title": "jaxsnn",
+      "description": "jaxsnn is an event-based approach to machine-learning-inspired training and simulation of SNNs, including support for the BrainScaleS-2 neuromorphic backend.",
+      "url": "https://github.com/electronicvisions/jaxsnn",
+      "date": "2026-02-09",
+      "authors": [
+        "electronicvisions"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 29,
+      "language": "Python",
+      "forks": 2,
+      "fullName": "electronicvisions/jaxsnn"
+    },
+    {
+      "id": "gh-Omkargaddi-Rapid_rails",
+      "source": "github",
+      "title": "Rapid_rails",
+      "description": "A high-performance train route optimization system that computes realistic multi-leg journeys using a C++ in-memory graph engine and a microservices-based architecture.",
+      "url": "https://github.com/Omkargaddi/Rapid_rails",
+      "date": "2026-02-09",
+      "authors": [
+        "Omkargaddi"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 5,
+      "language": "C++",
+      "forks": 0,
+      "fullName": "Omkargaddi/Rapid_rails"
+    },
+    {
+      "id": "gh-Yinsalt-Neuroticks",
+      "source": "github",
+      "title": "Neuroticks",
+      "description": "An advanced tool for neuromorphic simulations of any size. Work in progress.",
+      "url": "https://github.com/Yinsalt/Neuroticks",
+      "date": "2026-02-09",
+      "authors": [
+        "Yinsalt"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 3,
+      "language": "Jupyter Notebook",
+      "forks": 0,
+      "fullName": "Yinsalt/Neuroticks"
+    },
+    {
+      "id": "gh-OpenNeuromorphicComputing-OpenNeuromorphic-Daily",
+      "source": "github",
+      "title": "OpenNeuromorphic-Daily",
+      "description": "",
+      "url": "https://github.com/OpenNeuromorphicComputing/OpenNeuromorphic-Daily",
+      "date": "2026-02-09",
+      "authors": [
+        "OpenNeuromorphicComputing"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 1,
+      "language": "Python",
+      "forks": 0,
+      "fullName": "OpenNeuromorphicComputing/OpenNeuromorphic-Daily"
+    },
+    {
+      "id": "gh-neurophysics-cnrsthales-daily-neuromorphic-arxiv",
+      "source": "github",
+      "title": "daily-neuromorphic-arxiv",
+      "description": "",
+      "url": "https://github.com/neurophysics-cnrsthales/daily-neuromorphic-arxiv",
+      "date": "2026-02-09",
+      "authors": [
+        "neurophysics-cnrsthales"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 1,
+      "language": "Python",
+      "forks": 1,
+      "fullName": "neurophysics-cnrsthales/daily-neuromorphic-arxiv"
+    },
+    {
+      "id": "gh-Jeyapranov-CIM-Compute-in-Memory",
+      "source": "github",
+      "title": "CIM-Compute-in-Memory",
+      "description": "A 90nm Reconfigurable10T SRAM design for high-efficiency Compute-in-Memory operations",
+      "url": "https://github.com/Jeyapranov/CIM-Compute-in-Memory",
+      "date": "2026-02-09",
+      "authors": [
+        "Jeyapranov"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "",
+      "forks": 0,
+      "fullName": "Jeyapranov/CIM-Compute-in-Memory"
+    },
+    {
+      "id": "gh-deleekiir-number-float64-base-to-float16",
+      "source": "github",
+      "title": "number-float64-base-to-float16",
+      "description": "🔄 Convert Float64 base values to Float16 efficiently for optimized memory usage in numerical computing applications.",
+      "url": "https://github.com/deleekiir/number-float64-base-to-float16",
+      "date": "2026-02-09",
+      "authors": [
+        "deleekiir"
+      ],
+      "tags": [
+        "base",
+        "cast",
+        "convert",
+        "dbl",
+        "double",
+        "float",
+        "float16",
+        "float64",
+        "javascript",
+        "nodejs",
+        "stdlib",
+        "to",
+        "type",
+        "types",
+        "util",
+        "utilities",
+        "utility",
+        "utils"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "JavaScript",
+      "forks": 0,
+      "fullName": "deleekiir/number-float64-base-to-float16"
+    },
+    {
+      "id": "gh-SASInnovate2026-Simplifying-SAS-Viya-Explaining-the-Compute-and-CAS-Servers-Caslibs-and-In-Memory-Data",
+      "source": "github",
+      "title": "Simplifying-SAS-Viya-Explaining-the-Compute-and-CAS-Servers-Caslibs-and-In-Memory-Data",
+      "description": "Simplifying SAS®  Viya® : Explaining the Compute and CAS Servers, Caslibs, and In-Memory Data",
+      "url": "https://github.com/SASInnovate2026/Simplifying-SAS-Viya-Explaining-the-Compute-and-CAS-Servers-Caslibs-and-In-Memory-Data",
+      "date": "2026-02-09",
+      "authors": [
+        "SASInnovate2026"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "",
+      "forks": 0,
+      "fullName": "SASInnovate2026/Simplifying-SAS-Viya-Explaining-the-Compute-and-CAS-Servers-Caslibs-and-In-Memory-Data"
+    },
+    {
+      "id": "gh-Teddiesarcosomal392-eye",
+      "source": "github",
+      "title": "eye",
+      "description": "👁️ Preserve memories and engage in intelligent conversations with customizable AI models, designed for any computing capability.",
+      "url": "https://github.com/Teddiesarcosomal392/eye",
+      "date": "2026-02-09",
+      "authors": [
+        "Teddiesarcosomal392"
+      ],
+      "tags": [
+        "android-jetpack",
+        "appstartup",
+        "computer-vision",
+        "coroutines",
+        "daemonize",
+        "developer-kits",
+        "dubbox",
+        "eye-tracking",
+        "hardware",
+        "livedata-viewmodel",
+        "mvvm",
+        "mynteye",
+        "pupil",
+        "python",
+        "red-team",
+        "rpc-trace",
+        "skyeye",
+        "vipyinzhiwei"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "TypeScript",
+      "forks": 0,
+      "fullName": "Teddiesarcosomal392/eye"
+    },
+    {
+      "id": "gh-1maite-hazelcast-xh9",
+      "source": "github",
+      "title": "hazelcast-xh9",
+      "description": "🚀 Accelerate data processing with Hazelcast XH9, a powerful framework for seamless in-memory data management and distributed computing solutions.",
+      "url": "https://github.com/1maite/hazelcast-xh9",
+      "date": "2026-02-09",
+      "authors": [
+        "1maite"
+      ],
+      "tags": [
+        "caching",
+        "cloud-native",
+        "clustering",
+        "data-structures",
+        "debugging",
+        "distributed-systems",
+        "event-driven",
+        "fault-tolerance",
+        "hazelcast",
+        "in-memory-data-grid",
+        "integrations",
+        "java",
+        "microservices",
+        "performance",
+        "persistence",
+        "scalability"
+      ],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "",
+      "forks": 0,
+      "fullName": "1maite/hazelcast-xh9"
+    },
+    {
+      "id": "gh-Dimius0-spectravortex",
+      "source": "github",
+      "title": "spectravortex",
+      "description": "Programming language for photonic computing",
+      "url": "https://github.com/Dimius0/spectravortex",
+      "date": "2026-02-09",
+      "authors": [
+        "Dimius0"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "Python",
+      "forks": 0,
+      "fullName": "Dimius0/spectravortex"
+    },
+    {
+      "id": "gh-saarthi-10-Wireless-Analog-Computing-System",
+      "source": "github",
+      "title": "Wireless-Analog-Computing-System",
+      "description": "",
+      "url": "https://github.com/saarthi-10/Wireless-Analog-Computing-System",
+      "date": "2026-02-09",
+      "authors": [
+        "saarthi-10"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "C++",
+      "forks": 0,
+      "fullName": "saarthi-10/Wireless-Analog-Computing-System"
+    },
+    {
+      "id": "gh-ghasemarianpour-neuromorphic",
+      "source": "github",
+      "title": "neuromorphic",
+      "description": "This repository was created to house the files of the Neuromorphic School.",
+      "url": "https://github.com/ghasemarianpour/neuromorphic",
+      "date": "2026-02-09",
+      "authors": [
+        "ghasemarianpour"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "",
+      "forks": 0,
+      "fullName": "ghasemarianpour/neuromorphic"
+    },
+    {
+      "id": "gh-swainsubrat-neuromorphic",
+      "source": "github",
+      "title": "neuromorphic",
+      "description": "",
+      "url": "https://github.com/swainsubrat/neuromorphic",
+      "date": "2026-02-09",
+      "authors": [
+        "swainsubrat"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "Python",
+      "forks": 0,
+      "fullName": "swainsubrat/neuromorphic"
+    },
+    {
+      "id": "gh-Yongqi2333-nature-neuromorphic-digest",
+      "source": "github",
+      "title": "nature-neuromorphic-digest",
+      "description": "",
+      "url": "https://github.com/Yongqi2333/nature-neuromorphic-digest",
+      "date": "2026-02-09",
+      "authors": [
+        "Yongqi2333"
+      ],
+      "tags": [],
+      "matchedGroup": "ai-hardware",
+      "stars": 0,
+      "language": "Python",
+      "forks": 0,
+      "fullName": "Yongqi2333/nature-neuromorphic-digest"
+    }
+  ],
+  "arxiv": []
+}
