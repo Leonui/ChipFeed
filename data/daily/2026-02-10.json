@@ -1,6 +1,6 @@
 {
   "date": "2026-02-10",
-  "fetchedAt": "2026-02-10T07:40:12.679Z",
+  "fetchedAt": "2026-02-10T07:41:53.475Z",
   "github": [
     {
       "id": "gh-vllm-project-vllm",
@@ -2358,6 +2358,31 @@
       "fullName": "arc-research-lab/SCARIF"
     },
     {
+      "id": "gh-mobilint-mblt-model-zoo",
+      "source": "github",
+      "title": "mblt-model-zoo",
+      "description": "Mobilint Model Zoo Project",
+      "url": "https://github.com/mobilint/mblt-model-zoo",
+      "date": "2026-02-10",
+      "authors": [
+        "mobilint"
+      ],
+      "tags": [
+        "ai-accelerators",
+        "computer-vision",
+        "edge-ai",
+        "mobilint",
+        "quantization",
+        "quantized-neural-networks",
+        "transformer"
+      ],
+      "matchedGroup": "model-compression",
+      "stars": 15,
+      "language": "Python",
+      "forks": 0,
+      "fullName": "mobilint/mblt-model-zoo"
+    },
+    {
       "id": "gh-kk43994-claw-desktop-pet",
       "source": "github",
       "title": "claw-desktop-pet",
@@ -2562,40 +2587,6 @@
       "language": "C++",
       "forks": 2,
       "fullName": "Ascend/AscendNPU-IR"
-    },
-    {
-      "id": "gh-c3thousanddd-pasllm",
-      "source": "github",
-      "title": "pasllm",
-      "description": "🖥️ Run large language models locally with PasLLM, a pure Object Pascal engine optimized for efficient quantization and versatile architecture support.",
-      "url": "https://github.com/c3thousanddd/pasllm",
-      "date": "2026-02-10",
-      "authors": [
-        "c3thousanddd"
-      ],
-      "tags": [
-        "chatbot",
-        "delphi",
-        "fpc",
-        "freepascal",
-        "lazarus",
-        "llama",
-        "llama3",
-        "llm",
-        "llm-inference",
-        "mixtral",
-        "mixtral-8x7b",
-        "mixtral-8x7b-instruct",
-        "object-pascal",
-        "pascal",
-        "qwen3",
-        "qwen3-coder"
-      ],
-      "matchedGroup": "model-compression",
-      "stars": 7,
-      "language": "Pascal",
-      "forks": 2,
-      "fullName": "c3thousanddd/pasllm"
     },
     {
       "id": "gh-TheJoshBrod-CGinS",
