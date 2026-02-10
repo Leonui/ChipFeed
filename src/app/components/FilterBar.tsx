@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface FilterBarProps {
   sources: string[];
@@ -19,53 +21,75 @@ export default function FilterBar({
   onGroupChange,
 }: FilterBarProps) {
   return (
-    <div className="flex flex-wrap gap-4 mb-6">
-      <div className="flex flex-wrap gap-1">
+    <div className="space-y-4 mb-8">
+      {/* Sources */}
+      <div className="flex flex-wrap gap-2">
         <button
           onClick={() => onSourceChange("")}
-          className={`px-3 py-1 text-sm rounded-full transition-colors ${
-            activeSource === ""
-              ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-              : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
-          }`}
+          className={cn(
+            "relative px-4 py-1.5 text-sm font-medium rounded-full transition-colors z-0",
+            activeSource === "" 
+              ? "text-white" 
+              : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 bg-zinc-100 dark:bg-zinc-800/50"
+          )}
         >
-          All Sources
+          {activeSource === "" && (
+            <motion.div
+              layoutId="source-pill"
+              className="absolute inset-0 bg-zinc-900 dark:bg-zinc-100 rounded-full -z-10"
+              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+            />
+          )}
+          <span className={cn(activeSource === "" && "dark:text-zinc-900")}>All Sources</span>
         </button>
         {sources.map((s) => (
           <button
             key={s}
             onClick={() => onSourceChange(s)}
-            className={`px-3 py-1 text-sm rounded-full transition-colors ${
-              activeSource === s
-                ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-                : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
-            }`}
+            className={cn(
+              "relative px-4 py-1.5 text-sm font-medium rounded-full transition-colors z-0",
+              activeSource === s 
+                ? "text-white" 
+                : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 bg-zinc-100 dark:bg-zinc-800/50"
+            )}
           >
-            {s === "github" ? "GitHub" : "arXiv"}
+            {activeSource === s && (
+              <motion.div
+                layoutId="source-pill"
+                className="absolute inset-0 bg-zinc-900 dark:bg-zinc-100 rounded-full -z-10"
+                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              />
+            )}
+            <span className={cn(activeSource === s && "dark:text-zinc-900")}>
+              {s === "github" ? "GitHub" : "arXiv"}
+            </span>
           </button>
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-1">
+      {/* Groups */}
+      <div className="flex flex-wrap gap-2">
         <button
           onClick={() => onGroupChange("")}
-          className={`px-3 py-1 text-sm rounded-full transition-colors ${
+          className={cn(
+            "text-xs px-3 py-1 rounded-md border transition-all",
             activeGroup === ""
-              ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-              : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
-          }`}
+              ? "bg-indigo-50 border-indigo-200 text-indigo-700 dark:bg-indigo-900/30 dark:border-indigo-800 dark:text-indigo-300 font-medium"
+              : "bg-white border-zinc-200 text-zinc-500 hover:border-zinc-300 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700"
+          )}
         >
-          All Groups
+          All Topics
         </button>
         {groups.map((g) => (
           <button
             key={g}
             onClick={() => onGroupChange(g)}
-            className={`px-3 py-1 text-sm rounded-full transition-colors ${
+            className={cn(
+              "text-xs px-3 py-1 rounded-md border transition-all",
               activeGroup === g
-                ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-                : "bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
-            }`}
+                ? "bg-indigo-50 border-indigo-200 text-indigo-700 dark:bg-indigo-900/30 dark:border-indigo-800 dark:text-indigo-300 font-medium"
+                : "bg-white border-zinc-200 text-zinc-500 hover:border-zinc-300 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700"
+            )}
           >
             {g}
           </button>

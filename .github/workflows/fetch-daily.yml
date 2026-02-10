@@ -2,7 +2,7 @@ name: Fetch Daily Data
 
 on:
   schedule:
-    - cron: "35 6 * * *"
+    - cron: "0 5 * * *"
   workflow_dispatch:
 
 permissions:

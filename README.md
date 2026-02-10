@@ -35,7 +35,7 @@ npm run fetch:all
 
 ## GitHub Actions
 
-The workflow runs daily at 06:35 UTC and can also be triggered manually via `workflow_dispatch`.
+The workflow runs daily at 05:00 UTC and can also be triggered manually via `workflow_dispatch`.
 
 **Required secret:** Add `GH_PAT` (a GitHub Personal Access Token) to your repo's Settings > Secrets.
 

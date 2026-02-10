@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import type { DailyData, RundownItem } from "../lib/types";
 import NewsCard from "./NewsCard";
 import FilterBar from "./FilterBar";
@@ -48,18 +49,25 @@ export default function DayFeed({ data }: { data: DailyData }) {
         onSourceChange={setSource}
         onGroupChange={setGroup}
       />
-      <p className="text-sm text-gray-500 mb-4">
+      <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4 font-medium">
         Showing {filtered.length} of {allItems.length} items
       </p>
-      <div className="grid gap-4">
+      <motion.div 
+        layout
+        className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+      >
         {filtered.map((item) => (
           <NewsCard key={item.id} item={item} />
         ))}
-      </div>
+      </motion.div>
       {filtered.length === 0 && (
-        <p className="text-center text-gray-400 py-10">
-          No items match your filters.
-        </p>
+        <motion.div 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }}
+          className="text-center py-20 bg-zinc-50 dark:bg-zinc-900/50 rounded-2xl border border-dashed border-zinc-200 dark:border-zinc-800"
+        >
+          <p className="text-zinc-500">No items match your filters.</p>
+        </motion.div>
       )}
     </div>
   );
