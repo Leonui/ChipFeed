@@ -5,9 +5,6 @@ on:
     - cron: "0 5 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -34,10 +31,13 @@ jobs:
       - name: Merge and dedupe
         run: npm run fetch:merge
 
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "data: $(date -u +%Y-%m-%d) daily fetch"
-          git push
+      - name: Upload to R2
+        run: npx tsx scripts/r2-upload.ts
+        env:
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+
+      - name: Trigger Vercel rebuild
+        run: curl -s -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"

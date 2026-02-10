@@ -105,4 +105,4 @@ export const GITHUB_PER_PAGE = 20;
 // Max papers to fetch from arXiv in a single query
 export const ARXIV_MAX_RESULTS = 100;
 // Auto-prune daily JSON files older than this many days
-export const DATA_RETENTION_DAYS = 90;
+export const DATA_RETENTION_DAYS = 365;

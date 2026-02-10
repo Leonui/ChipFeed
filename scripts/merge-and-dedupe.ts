@@ -1,6 +1,5 @@
 import * as fs from "fs";
 import * as path from "path";
-import { DATA_RETENTION_DAYS } from "./config";
 import type { GitHubItem, ArxivItem, DailyData, IndexManifest } from "./types";
 
 const dataDir = path.join(process.cwd(), "data");
@@ -16,27 +15,6 @@ function readJson<T>(filePath: string): T | null {
   } catch {
     return null;
   }
-}
-
-function pruneOldFiles(index: IndexManifest): IndexManifest {
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - DATA_RETENTION_DAYS);
-  const cutoffStr = cutoff.toISOString().slice(0, 10);
-
-  const kept: string[] = [];
-  for (const date of index.dates) {
-    if (date < cutoffStr) {
-      const fp = path.join(dailyDir, `${date}.json`);
-      if (fs.existsSync(fp)) {
-        fs.unlinkSync(fp);
-        console.log(`Pruned ${date}.json`);
-      }
-    } else {
-      kept.push(date);
-    }
-  }
-  index.dates = kept;
-  return index;
 }
 
 function main() {
@@ -77,7 +55,6 @@ function main() {
   }
   index.lastUpdated = new Date().toISOString();
 
-  index = pruneOldFiles(index);
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
   console.log(`Updated index.json (${index.dates.length} dates)`);
 

@@ -10,7 +10,9 @@
     "fetch:github": "tsx scripts/fetch-github.ts",
     "fetch:arxiv": "tsx scripts/fetch-arxiv.ts",
     "fetch:merge": "tsx scripts/merge-and-dedupe.ts",
-    "fetch:all": "npm run fetch:github && npm run fetch:arxiv && npm run fetch:merge"
+    "fetch:all": "npm run fetch:github && npm run fetch:arxiv && npm run fetch:merge",
+    "prebuild": "tsx scripts/r2-download.ts",
+    "upload:r2": "tsx scripts/r2-upload.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
@@ -25,11 +27,13 @@
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.986.0",
     "@eslint/eslintrc": "^3.0.0",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "dotenv": "^17.2.4",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.1.0",
     "fast-xml-parser": "^4.5.0",

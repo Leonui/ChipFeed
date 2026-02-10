@@ -13,6 +13,10 @@ next-env.d.ts
 data/_github.json
 data/_arxiv.json
 
+# R2-managed data (downloaded at build time)
+data/daily/
+data/index.json
+
 # env / secrets
 .env
 .env.*
