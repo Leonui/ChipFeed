@@ -24,7 +24,7 @@ async function uploadFile(key: string, filePath: string): Promise<void> {
   console.log(`Uploaded ${key}`);
 }
 
-async function pruneOldObjects(): Promise<void> {
+async function pruneOldObjects(): Promise<string> {
   const cutoff = new Date();
   cutoff.setDate(cutoff.getDate() - DATA_RETENTION_DAYS);
   const cutoffStr = cutoff.toISOString().slice(0, 10);
@@ -40,7 +40,7 @@ async function pruneOldObjects(): Promise<void> {
 
   if (toDelete.length === 0) {
     console.log("No old objects to prune");
-    return;
+    return cutoffStr;
   }
 
   await s3.send(
@@ -52,6 +52,7 @@ async function pruneOldObjects(): Promise<void> {
     })
   );
   console.log(`Pruned ${toDelete.length} old object(s) from R2`);
+  return cutoffStr;
 }
 
 async function main(): Promise<void> {
@@ -69,7 +70,17 @@ async function main(): Promise<void> {
   }
 
   // Prune old objects beyond retention window
-  await pruneOldObjects();
+  const cutoffStr = await pruneOldObjects();
+
+  // Remove pruned dates from index.json and re-upload
+  const indexData = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
+  const before = indexData.dates.length;
+  indexData.dates = indexData.dates.filter((d: string) => d >= cutoffStr);
+  if (indexData.dates.length < before) {
+    fs.writeFileSync(indexPath, JSON.stringify(indexData, null, 2));
+    await uploadFile("index.json", indexPath);
+    console.log(`Removed ${before - indexData.dates.length} pruned date(s) from index.json`);
+  }
 
   console.log("R2 upload complete");
 }

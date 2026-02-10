@@ -35,6 +35,7 @@ flowchart TD
 | `merge-and-dedupe.ts` | `fetch:merge` | Merges both sources, sorts (stars desc / date desc), writes `data/daily/YYYY-MM-DD.json` and updates `data/index.json` |
 | `r2-upload.ts` | `upload:r2` | Uploads `index.json` + all `daily/*.json` to R2; prunes objects older than `DATA_RETENTION_DAYS` |
 | `r2-download.ts` | _(prebuild)_ | Downloads `index.json` + each daily file from R2 into `data/` before `next build` |
+| `r2-download-index.ts` | `download:index` | Downloads existing `index.json` from R2 so `merge-and-dedupe` can append to it |
 | `r2-client.ts` | — | Shared S3-compatible client for Cloudflare R2 |
 | `config.ts` | — | Keyword groups, arXiv categories, tunable constants |
 | `types.ts` | — | Shared TypeScript interfaces (`GitHubItem`, `ArxivItem`, `DailyData`, `IndexManifest`) |

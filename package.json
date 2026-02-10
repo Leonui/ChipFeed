@@ -12,7 +12,8 @@
     "fetch:merge": "tsx scripts/merge-and-dedupe.ts",
     "fetch:all": "npm run fetch:github && npm run fetch:arxiv && npm run fetch:merge",
     "prebuild": "tsx scripts/r2-download.ts",
-    "upload:r2": "tsx scripts/r2-upload.ts"
+    "upload:r2": "tsx scripts/r2-upload.ts",
+    "download:index": "tsx scripts/r2-download-index.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

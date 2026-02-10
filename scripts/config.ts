@@ -96,8 +96,8 @@ export const ARXIV_KEYWORD_GROUPS: Record<string, string[]> = {
 // Shared Constants
 // ---------------------
 
-// Delay between API requests to stay within rate limits (arXiv requires >3s)
-export const REQUEST_DELAY_MS = 3500;
+// Delay between API requests to stay within rate limits (arXiv requires >3s, using 6s for safety)
+export const REQUEST_DELAY_MS = 6000;
 // Max pages to paginate per GitHub keyword group
 export const GITHUB_MAX_PAGES = 1;
 // Number of results per page from GitHub Search API (max 100)
@@ -105,4 +105,4 @@ export const GITHUB_PER_PAGE = 20;
 // Max papers to fetch from arXiv in a single query
 export const ARXIV_MAX_RESULTS = 100;
 // Auto-prune daily JSON files older than this many days
-export const DATA_RETENTION_DAYS = 365;
+export const DATA_RETENTION_DAYS = 36500;

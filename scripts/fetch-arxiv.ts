@@ -30,17 +30,6 @@ function toArray<T>(val: T | T[] | undefined): T[] {
   return Array.isArray(val) ? val : [val];
 }
 
-function buildQuery(): string {
-  const catPart = ARXIV_CATEGORIES.map((c) => `cat:${c}`).join("+OR+");
-  const allKeywords: string[] = [];
-  for (const kws of Object.values(ARXIV_KEYWORD_GROUPS)) {
-    allKeywords.push(...kws);
-  }
-  const kwPart = allKeywords
-    .map((kw) => `all:%22${kw.replace(/\s+/g, "+")}%22`)
-    .join("+OR+");
-  return `%28${catPart}%29+AND+%28${kwPart}%29`;
-}
 
 function matchGroup(title: string, summary: string): string {
   const text = `${title} ${summary}`.toLowerCase();
@@ -50,26 +39,54 @@ function matchGroup(title: string, summary: string): string {
   return "other";
 }
 
-async function fetchAll(): Promise<ArxivItem[]> {
-  const query = buildQuery();
-  const url =
-    `${ARXIV_API}?search_query=${query}` +
-    `&sortBy=submittedDate&sortOrder=descending` +
-    `&max_results=${ARXIV_MAX_RESULTS}`;
+const MAX_RETRIES = 4;
+const INITIAL_BACKOFF_MS = 10000;
+const RETRYABLE_STATUSES = [429, 500, 502, 503];
 
-  console.log("Fetching arXiv papers (single request)...");
-  const res = await fetch(url);
-  if (!res.ok) {
-    console.error(`HTTP ${res.status}: ${res.statusText}`);
-    return [];
+async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<string | null> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (res.ok) return await res.text();
+
+      console.warn(`  Attempt ${attempt}/${retries}: HTTP ${res.status} ${res.statusText}`);
+      if (RETRYABLE_STATUSES.includes(res.status)) {
+        const retryAfter = res.headers.get("retry-after");
+        const backoff = retryAfter
+          ? parseInt(retryAfter, 10) * 1000
+          : INITIAL_BACKOFF_MS * Math.pow(2, attempt - 1);
+        console.warn(`  Retrying in ${backoff / 1000}s...`);
+        await sleep(backoff);
+        continue;
+      }
+      return null;
+    } catch (err) {
+      console.warn(`  Attempt ${attempt}/${retries}: Network error - ${err}`);
+      if (attempt < retries) {
+        const backoff = INITIAL_BACKOFF_MS * Math.pow(2, attempt - 1);
+        console.warn(`  Retrying in ${backoff / 1000}s...`);
+        await sleep(backoff);
+      }
+    }
   }
+  return null;
+}
 
-  const xml = await res.text();
+function buildGroupQuery(group: string, keywords: string[]): string {
+  const catPart = ARXIV_CATEGORIES.map((c) => `cat:${c}`).join("+OR+");
+  const kwPart = keywords
+    .map((kw) => `all:%22${kw.replace(/\s+/g, "+")}%22`)
+    .join("+OR+");
+  return `%28${catPart}%29+AND+%28${kwPart}%29`;
+}
+
+function parseEntries(xml: string): ArxivItem[] {
   const parsed = parser.parse(xml);
   const entries = toArray(parsed?.feed?.entry);
   const items: ArxivItem[] = [];
 
   for (const entry of entries) {
+    if (!entry.id) continue;
     const arxivId = extractId(entry.id);
     const authors = toArray(entry.author).map(
       (a: { name: string }) => a.name,
@@ -100,9 +117,45 @@ async function fetchAll(): Promise<ArxivItem[]> {
       primaryCategory: cats[0] ?? "",
     });
   }
-
-  console.log(`Fetched ${items.length} papers`);
   return items;
+}
+
+async function fetchAll(): Promise<ArxivItem[]> {
+  const groups = Object.entries(ARXIV_KEYWORD_GROUPS);
+  const perGroup = Math.max(10, Math.floor(ARXIV_MAX_RESULTS / groups.length));
+  const seen = new Set<string>();
+  const allItems: ArxivItem[] = [];
+
+  for (const [group, keywords] of groups) {
+    const query = buildGroupQuery(group, keywords);
+    const url =
+      `${ARXIV_API}?search_query=${query}` +
+      `&sortBy=submittedDate&sortOrder=descending` +
+      `&max_results=${perGroup}`;
+
+    console.log(`Fetching [${group}] (${keywords.length} keywords, max ${perGroup})...`);
+    const xml = await fetchWithRetry(url);
+    if (!xml) {
+      console.warn(`  Skipping [${group}] after failed retries`);
+      await sleep(REQUEST_DELAY_MS);
+      continue;
+    }
+
+    const items = parseEntries(xml);
+    let added = 0;
+    for (const item of items) {
+      if (!seen.has(item.arxivId)) {
+        seen.add(item.arxivId);
+        allItems.push(item);
+        added++;
+      }
+    }
+    console.log(`  Got ${items.length} results, ${added} new (${allItems.length} total)`);
+    await sleep(REQUEST_DELAY_MS);
+  }
+
+  console.log(`Fetched ${allItems.length} unique papers across ${groups.length} groups`);
+  return allItems;
 }
 
 async function main() {

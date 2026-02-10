@@ -65,7 +65,8 @@ The workflow runs daily at 05:00 UTC and can also be triggered manually via `wor
 │   ├── merge-and-dedupe.ts             # Combine, dedupe, write daily JSON
 │   ├── r2-client.ts                    # Shared S3 client for Cloudflare R2
 │   ├── r2-upload.ts                    # Upload data to R2 + prune old objects
-│   └── r2-download.ts                  # Download data from R2 (Vercel prebuild)
+│   ├── r2-download.ts                  # Download data from R2 (Vercel prebuild)
+│   └── r2-download-index.ts            # Download existing index.json before merge
 ├── data/                               # Downloaded at build time from R2 (git-ignored)
 │   ├── index.json                      # Manifest of available dates
 │   └── daily/                          # One JSON file per day
