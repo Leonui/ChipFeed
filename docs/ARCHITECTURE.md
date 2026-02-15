@@ -11,7 +11,8 @@ flowchart TD
         B[arXiv API] -->|fetch:arxiv| D[data/_arxiv.json]
         C --> E[merge-and-dedupe]
         D --> E
-        E --> F[data/daily/YYYY-MM-DD.json\ndata/index.json]
+        H -->|seen-ids.json| E
+        E --> F[data/daily/YYYY-MM-DD.json\ndata/index.json\ndata/seen-ids.json]
         F --> G[r2-upload]
         G -->|PutObject + prune| H[(Cloudflare R2)]
         G --> I[curl Vercel deploy hook]
@@ -32,13 +33,43 @@ flowchart TD
 |--------|------------|------|
 | `fetch-github.ts` | `fetch:github` | Queries GitHub Search API for each keyword group; writes `data/_github.json` |
 | `fetch-arxiv.ts` | `fetch:arxiv` | Queries arXiv API across configured categories and keywords; writes `data/_arxiv.json` |
-| `merge-and-dedupe.ts` | `fetch:merge` | Merges both sources, sorts (stars desc / date desc), writes `data/daily/YYYY-MM-DD.json` and updates `data/index.json` |
-| `r2-upload.ts` | `upload:r2` | Uploads `index.json` + all `daily/*.json` to R2; prunes objects older than `DATA_RETENTION_DAYS` |
+| `merge-and-dedupe.ts` | `fetch:merge` | Merges both sources, filters cross-day duplicates via `seen-ids.json`, sorts, writes `data/daily/YYYY-MM-DD.json` and updates `data/index.json` |
+| `backfill-seen-ids.ts` | `backfill:seen` | One-time script to seed `seen-ids.json` from existing daily files |
+| `r2-upload.ts` | `upload:r2` | Uploads `index.json`, `seen-ids.json`, and all `daily/*.json` to R2; prunes objects older than `DATA_RETENTION_DAYS` |
 | `r2-download.ts` | _(prebuild)_ | Downloads `index.json` + each daily file from R2 into `data/` before `next build` |
-| `r2-download-index.ts` | `download:index` | Downloads existing `index.json` from R2 so `merge-and-dedupe` can append to it |
+| `r2-download-index.ts` | `download:index` | Downloads `index.json` and `seen-ids.json` from R2 so `merge-and-dedupe` can use them |
 | `r2-client.ts` | — | Shared S3-compatible client for Cloudflare R2 |
 | `config.ts` | — | Keyword groups, arXiv categories, tunable constants |
-| `types.ts` | — | Shared TypeScript interfaces (`GitHubItem`, `ArxivItem`, `DailyData`, `IndexManifest`) |
+| `types.ts` | — | Shared TypeScript interfaces (`GitHubItem`, `ArxivItem`, `DailyData`, `IndexManifest`, `SeenIdRegistry`) |
+
+## Cross-Day Deduplication
+
+Popular repos and papers often appear in multiple daily fetches. The `seen-ids.json` registry tracks every item ID and the dates it was seen, so the merge step can filter out items that already appeared on a previous day.
+
+### Schema (`data/seen-ids.json`)
+
+```typescript
+interface SeenIdRegistry {
+  ids: Record<string, string[]>;  // item ID → list of ISO date strings
+  lastUpdated: string;
+}
+```
+
+### How it works
+
+1. `r2-download-index.ts` downloads `seen-ids.json` from R2 (gracefully handles missing file on first run)
+2. `merge-and-dedupe.ts` loads the registry, keeps only items that are new or were only seen today, registers new IDs, and writes the updated registry back
+3. `r2-upload.ts` uploads the updated `seen-ids.json` to R2
+
+Items seen on a previous day are excluded from the daily file. Same-day re-runs are idempotent — running merge twice on the same day produces the same output.
+
+### Backfilling
+
+To seed the registry from existing daily files (e.g., after a fresh setup):
+
+```bash
+npm run backfill:seen
+```
 
 ## Environment Variables
 
