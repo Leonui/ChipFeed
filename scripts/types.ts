@@ -38,3 +38,9 @@ export interface IndexManifest {
   dates: string[];
   lastUpdated: string;
 }
+
+export interface SeenIdRegistry {
+  /** Map of item ID → list of ISO date strings when seen */
+  ids: Record<string, string[]>;
+  lastUpdated: string;
+}

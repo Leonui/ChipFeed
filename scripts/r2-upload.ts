@@ -63,6 +63,12 @@ async function main(): Promise<void> {
   }
   await uploadFile("index.json", indexPath);
 
+  // Upload seen-ids.json
+  const seenPath = path.join(dataDir, "seen-ids.json");
+  if (fs.existsSync(seenPath)) {
+    await uploadFile("seen-ids.json", seenPath);
+  }
+
   // Upload all daily/*.json files
   const dailyFiles = fs.readdirSync(dailyDir).filter((f) => f.endsWith(".json"));
   for (const file of dailyFiles) {

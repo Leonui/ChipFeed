@@ -1,6 +1,7 @@
 import { getIndex, getDailyData } from "@/app/lib/data";
 import DayFeed from "@/app/components/DayFeed";
 import Link from "next/link";
+import { CloudSun } from "lucide-react";
 
 export function generateStaticParams() {
   const index = getIndex();
@@ -38,7 +39,19 @@ export default async function DayPage({
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
         {data.github.length} repos &middot; {data.arxiv.length} papers
       </p>
-      <DayFeed data={data} />
+      {data.github.length === 0 && data.arxiv.length === 0 ? (
+        <div className="flex flex-col items-center justify-center py-24 text-center">
+          <div className="w-16 h-16 bg-sky-50 dark:bg-sky-900/20 rounded-full flex items-center justify-center mb-5">
+            <CloudSun className="w-8 h-8 text-sky-500 dark:text-sky-400" />
+          </div>
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">Quiet day</h2>
+          <p className="text-zinc-500 dark:text-zinc-400 max-w-sm">
+            The chips took a break. Nothing new landed on {date}.
+          </p>
+        </div>
+      ) : (
+        <DayFeed data={data} />
+      )}
     </div>
   );
 }

@@ -16,6 +16,7 @@ data/_arxiv.json
 # R2-managed data (downloaded at build time)
 data/daily/
 data/index.json
+data/seen-ids.json
 
 # env / secrets
 .env
