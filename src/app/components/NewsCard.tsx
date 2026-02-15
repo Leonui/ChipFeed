@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star, GitFork, BookOpen, ExternalLink, Calendar, User, FileText, Github } from "lucide-react";
-import type { RundownItem, GitHubItem, ArxivItem } from "../lib/types";
+import type { RundownItem, GitHubItem, ArxivItem, ScholarItem } from "../lib/types";
 import { cn } from "@/lib/utils";
 
 function isGitHub(item: RundownItem): item is GitHubItem {
@@ -11,6 +11,10 @@ function isGitHub(item: RundownItem): item is GitHubItem {
 
 function isArxiv(item: RundownItem): item is ArxivItem {
   return item.source === "arxiv";
+}
+
+function isScholar(item: RundownItem): item is ScholarItem {
+  return item.source === "scholar";
 }
 
 export default function NewsCard({ item }: { item: RundownItem }) {
@@ -34,10 +38,12 @@ export default function NewsCard({ item }: { item: RundownItem }) {
               "text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider",
               isGh
                 ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100"
-                : "bg-red-50 text-red-700 dark:bg-red-950/30 dark:text-red-400"
+                : item.source === "arxiv"
+                ? "bg-red-50 text-red-700 dark:bg-red-950/30 dark:text-red-400"
+                : "bg-blue-50 text-blue-700 dark:bg-blue-950/30 dark:text-blue-400"
             )}
           >
-            {isGh ? "GitHub" : "arXiv"}
+            {isGh ? "GitHub" : item.source === "arxiv" ? "arXiv" : "Scholar"}
           </span>
           <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400 px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50">
             {item.matchedGroup}
@@ -81,6 +87,23 @@ export default function NewsCard({ item }: { item: RundownItem }) {
               <GitFork className="w-3.5 h-3.5" />
               {item.forks.toLocaleString()}
             </span>
+          </>
+        ) : isScholar(item) ? (
+          <>
+            <span className="flex items-center gap-1.5 line-clamp-1 max-w-[50%]">
+              <User className="w-3.5 h-3.5" />
+              {item.authors[0]}
+              {item.authors.length > 1 && ` +${item.authors.length - 1}`}
+            </span>
+            <span className="flex items-center gap-1">
+              <BookOpen className="w-3.5 h-3.5" />
+              {item.citationCount.toLocaleString()}
+            </span>
+            {item.publicationVenue && (
+              <span className="line-clamp-1 ml-auto text-[10px]">
+                {item.publicationVenue}
+              </span>
+            )}
           </>
         ) : (
           <>

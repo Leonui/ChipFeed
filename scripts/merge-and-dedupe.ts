@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import type { GitHubItem, ArxivItem, DailyData, IndexManifest, SeenIdRegistry } from "./types";
+import type { GitHubItem, ArxivItem, ScholarItem, DailyData, IndexManifest, SeenIdRegistry } from "./types";
 
 const dataDir = path.join(process.cwd(), "data");
 const dailyDir = path.join(dataDir, "daily");
@@ -22,9 +22,11 @@ function main() {
 
   const ghPath = path.join(dataDir, "_github.json");
   const axPath = path.join(dataDir, "_arxiv.json");
+  const scPath = path.join(dataDir, "_scholar.json");
 
   const github = readJson<GitHubItem[]>(ghPath) ?? [];
   const arxiv = readJson<ArxivItem[]>(axPath) ?? [];
+  const scholar = readJson<ScholarItem[]>(scPath) ?? [];
 
   // Cross-day deduplication
   const seenPath = path.join(dataDir, "seen-ids.json");
@@ -45,14 +47,20 @@ function main() {
     const dates = seen.ids[item.id];
     return !dates || dates.every((d) => d === dateStr);
   });
+  const scBefore = scholar.length;
+  const filteredSc = scholar.filter((item) => {
+    const dates = seen.ids[item.id];
+    return !dates || dates.every((d) => d === dateStr);
+  });
 
   console.log(
     `Filtered ${filteredGh.length}/${ghBefore} GitHub items (${ghBefore - filteredGh.length} duplicates), ` +
-    `${filteredAx.length}/${axBefore} arXiv items (${axBefore - filteredAx.length} duplicates)`
+    `${filteredAx.length}/${axBefore} arXiv items (${axBefore - filteredAx.length} duplicates), ` +
+    `${filteredSc.length}/${scBefore} Scholar items (${scBefore - filteredSc.length} duplicates)`
   );
 
   // Register new IDs
-  for (const item of [...filteredGh, ...filteredAx]) {
+  for (const item of [...filteredGh, ...filteredAx, ...filteredSc]) {
     if (!seen.ids[item.id]) {
       seen.ids[item.id] = [dateStr];
     } else if (!seen.ids[item.id].includes(dateStr)) {
@@ -65,18 +73,20 @@ function main() {
 
   filteredGh.sort((a, b) => b.stars - a.stars);
   filteredAx.sort((a, b) => b.date.localeCompare(a.date));
+  filteredSc.sort((a, b) => b.citationCount - a.citationCount);
 
   const daily: DailyData = {
     date: dateStr,
     fetchedAt: new Date().toISOString(),
     github: filteredGh,
     arxiv: filteredAx,
+    scholar: filteredSc,
   };
 
   const dailyPath = path.join(dailyDir, `${dateStr}.json`);
   fs.writeFileSync(dailyPath, JSON.stringify(daily, null, 2));
   console.log(`Wrote ${dailyPath}`);
-  console.log(`  GitHub: ${filteredGh.length}, arXiv: ${filteredAx.length}`);
+  console.log(`  GitHub: ${filteredGh.length}, arXiv: ${filteredAx.length}, Scholar: ${filteredSc.length}`);
 
   // Update index
   const indexPath = path.join(dataDir, "index.json");
@@ -95,7 +105,7 @@ function main() {
   console.log(`Updated index.json (${index.dates.length} dates)`);
 
   // Clean up temp files
-  for (const f of [ghPath, axPath]) {
+  for (const f of [ghPath, axPath, scPath]) {
     if (fs.existsSync(f)) fs.unlinkSync(f);
   }
 }

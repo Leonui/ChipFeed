@@ -9,13 +9,14 @@
     "lint": "next lint",
     "fetch:github": "tsx scripts/fetch-github.ts",
     "fetch:arxiv": "tsx scripts/fetch-arxiv.ts",
+    "fetch:scholar": "tsx scripts/fetch-scholar.ts",
     "fetch:merge": "tsx scripts/merge-and-dedupe.ts",
-    "fetch:all": "npm run fetch:github && npm run fetch:arxiv && npm run fetch:merge",
+    "fetch:all": "npm run fetch:github && npm run fetch:arxiv && npm run fetch:scholar && npm run fetch:merge",
     "prebuild": "tsx scripts/r2-download.ts",
     "upload:r2": "tsx scripts/r2-upload.ts",
     "download:index": "tsx scripts/r2-download-index.ts",
     "backfill:seen": "tsx scripts/backfill-seen-ids.ts",
-    "pipeline": "npm run download:index && npm run fetch:github && npm run fetch:arxiv && npm run fetch:merge && npm run upload:r2"
+    "pipeline": "npm run download:index && npm run fetch:github && npm run fetch:arxiv && npm run fetch:scholar && npm run fetch:merge && npm run upload:r2"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

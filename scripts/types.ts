@@ -1,6 +1,6 @@
 export interface RundownItemBase {
   id: string;
-  source: "github" | "arxiv";
+  source: "github" | "arxiv" | "scholar";
   title: string;
   description: string;
   url: string;
@@ -25,13 +25,24 @@ export interface ArxivItem extends RundownItemBase {
   primaryCategory: string;
 }
 
-export type RundownItem = GitHubItem | ArxivItem;
+export interface ScholarItem extends RundownItemBase {
+  source: "scholar";
+  paperId: string;
+  citationCount: number;
+  publicationVenue: string;
+  publicationYear: number;
+  fieldsOfStudy: string[];
+  externalIds?: { DOI?: string; ArXiv?: string };
+}
+
+export type RundownItem = GitHubItem | ArxivItem | ScholarItem;
 
 export interface DailyData {
   date: string;
   fetchedAt: string;
   github: GitHubItem[];
   arxiv: ArxivItem[];
+  scholar: ScholarItem[];
 }
 
 export interface IndexManifest {

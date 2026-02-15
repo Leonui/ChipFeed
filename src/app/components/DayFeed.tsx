@@ -13,7 +13,7 @@ export default function DayFeed({ data }: { data: DailyData }) {
   const [search, setSearch] = useState("");
 
   const allItems: RundownItem[] = useMemo(
-    () => [...data.github, ...data.arxiv],
+    () => [...data.github, ...data.arxiv, ...(data.scholar ?? [])],
     [data],
   );
 
@@ -42,7 +42,7 @@ export default function DayFeed({ data }: { data: DailyData }) {
     <div>
       <SearchBar value={search} onChange={setSearch} />
       <FilterBar
-        sources={["github", "arxiv"]}
+        sources={["github", "arxiv", "scholar"]}
         groups={groups}
         activeSource={source}
         activeGroup={group}

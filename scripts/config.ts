@@ -106,3 +106,45 @@ export const GITHUB_PER_PAGE = 20;
 export const ARXIV_MAX_RESULTS = 100;
 // Auto-prune daily JSON files older than this many days
 export const DATA_RETENTION_DAYS = 36500;
+
+// --------------------------
+// Semantic Scholar Config
+// --------------------------
+
+export const SCHOLAR_KEYWORD_GROUPS: Record<string, string[]> = {
+  "hardware-design": [
+    "FPGA design", "ASIC design", "RTL synthesis",
+    "Verilog", "SystemVerilog", "VHDL",
+  ],
+  "synthesis-pnr": [
+    "logic synthesis", "place and route",
+    "electronic design automation", "physical design", "OpenROAD",
+  ],
+  "accelerators": [
+    "neural network accelerator", "AI accelerator",
+    "hardware accelerator", "TPU", "systolic array", "dataflow architecture",
+  ],
+  "model-compression": [
+    "model compression", "neural network quantization", "network pruning",
+    "knowledge distillation", "neural architecture search",
+  ],
+  "optimization": [
+    "high level synthesis", "CUDA optimization",
+    "kernel optimization", "operator fusion", "graph compiler",
+  ],
+  "frameworks": [
+    "TVM compiler", "MLIR", "ONNX",
+    "TensorRT", "deep learning compiler",
+  ],
+  "edge-ai": [
+    "TinyML", "embedded machine learning",
+    "on-device inference", "edge inference", "IoT machine learning",
+  ],
+  "ai-hardware": [
+    "neuromorphic computing", "in-memory computing",
+    "photonic computing", "analog computing", "compute-in-memory",
+  ],
+};
+
+export const SCHOLAR_MAX_RESULTS_PER_GROUP = 10;
+export const SCHOLAR_MIN_YEAR = new Date().getFullYear() - 1;

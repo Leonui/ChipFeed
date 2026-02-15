@@ -1,6 +1,6 @@
 import { getLatestDate, getDailyData } from "./lib/data";
 import DayFeed from "./components/DayFeed";
-import { Calendar, Github, FileText, Coffee } from "lucide-react";
+import { Calendar, Github, FileText, BookOpen, Coffee } from "lucide-react";
 
 export default function Home() {
   const date = getLatestDate();
@@ -45,9 +45,13 @@ export default function Home() {
             <FileText className="w-4 h-4" />
             <span>{data.arxiv.length} papers</span>
           </div>
+          <div className="flex items-center gap-2">
+            <BookOpen className="w-4 h-4" />
+            <span>{(data.scholar ?? []).length} scholar</span>
+          </div>
         </div>
       </div>
-      {data.github.length === 0 && data.arxiv.length === 0 ? (
+      {data.github.length === 0 && data.arxiv.length === 0 && (data.scholar ?? []).length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 text-center">
           <div className="w-16 h-16 bg-amber-50 dark:bg-amber-900/20 rounded-full flex items-center justify-center mb-5">
             <Coffee className="w-8 h-8 text-amber-500 dark:text-amber-400" />

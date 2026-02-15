@@ -61,7 +61,7 @@ export default function FilterBar({
               />
             )}
             <span className={cn(activeSource === s && "dark:text-zinc-900")}>
-              {s === "github" ? "GitHub" : "arXiv"}
+              {s === "github" ? "GitHub" : s === "arxiv" ? "arXiv" : "Scholar"}
             </span>
           </button>
         ))}

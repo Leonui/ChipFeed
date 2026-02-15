@@ -28,6 +28,12 @@ jobs:
         run: npm run fetch:arxiv
         continue-on-error: true
 
+      - name: Fetch Scholar papers
+        run: npm run fetch:scholar
+        continue-on-error: true
+        env:
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+
       - name: Download existing index from R2
         continue-on-error: true
         run: npm run download:index

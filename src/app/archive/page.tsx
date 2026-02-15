@@ -1,6 +1,6 @@
 import { getIndex, getDailyData } from "@/app/lib/data";
 import Link from "next/link";
-import { Github, FileText, CloudSun } from "lucide-react";
+import { Github, FileText, BookOpen, CloudSun } from "lucide-react";
 
 export default function ArchivePage() {
   const index = getIndex();
@@ -18,7 +18,8 @@ export default function ArchivePage() {
             const data = getDailyData(date);
             const ghCount = data?.github.length ?? 0;
             const axCount = data?.arxiv.length ?? 0;
-            const isEmpty = ghCount === 0 && axCount === 0;
+            const scCount = data?.scholar?.length ?? 0;
+            const isEmpty = ghCount === 0 && axCount === 0 && scCount === 0;
 
             return (
               <Link
@@ -43,6 +44,10 @@ export default function ArchivePage() {
                     <span className="flex items-center gap-1.5">
                       <FileText className="w-3.5 h-3.5" />
                       {axCount}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <BookOpen className="w-3.5 h-3.5" />
+                      {scCount}
                     </span>
                   </div>
                 )}

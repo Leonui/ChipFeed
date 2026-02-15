@@ -37,9 +37,9 @@ export default async function DayPage({
       </div>
       <h1 className="text-2xl font-bold mb-1">{date}</h1>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-        {data.github.length} repos &middot; {data.arxiv.length} papers
+        {data.github.length} repos &middot; {data.arxiv.length} papers &middot; {(data.scholar ?? []).length} scholar
       </p>
-      {data.github.length === 0 && data.arxiv.length === 0 ? (
+      {data.github.length === 0 && data.arxiv.length === 0 && (data.scholar ?? []).length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 text-center">
           <div className="w-16 h-16 bg-sky-50 dark:bg-sky-900/20 rounded-full flex items-center justify-center mb-5">
             <CloudSun className="w-8 h-8 text-sky-500 dark:text-sky-400" />
