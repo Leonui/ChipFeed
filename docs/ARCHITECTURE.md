@@ -126,16 +126,25 @@ All search keywords and constants live in `scripts/config.ts`.
 
 ## Local Development
 
-### Fetching data locally
+### Full pipeline (mirrors CI)
+
+Requires `.env` with R2 credentials and `GH_PAT`:
 
 ```bash
 export GH_PAT=your_github_personal_access_token
-npm run fetch:github
-npm run fetch:arxiv
-npm run fetch:merge
-# or all at once:
+npm run pipeline
+```
+
+This runs the complete flow: download index + `seen-ids.json` from R2 → fetch GitHub → fetch arXiv → merge with cross-day dedup → upload back to R2.
+
+### Fetching data only (no R2)
+
+```bash
+export GH_PAT=your_github_personal_access_token
 npm run fetch:all
 ```
+
+This fetches and merges locally but skips the R2 round-trip. Dedup still works if `data/seen-ids.json` exists locally (e.g., from a previous `pipeline` run or `npm run backfill:seen`).
 
 ### Testing R2 locally
 

@@ -14,7 +14,8 @@
     "prebuild": "tsx scripts/r2-download.ts",
     "upload:r2": "tsx scripts/r2-upload.ts",
     "download:index": "tsx scripts/r2-download-index.ts",
-    "backfill:seen": "tsx scripts/backfill-seen-ids.ts"
+    "backfill:seen": "tsx scripts/backfill-seen-ids.ts",
+    "pipeline": "npm run download:index && npm run fetch:github && npm run fetch:arxiv && npm run fetch:merge && npm run upload:r2"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
