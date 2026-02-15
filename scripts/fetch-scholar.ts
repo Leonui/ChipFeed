@@ -4,12 +4,12 @@ import {
   SCHOLAR_KEYWORD_GROUPS,
   SCHOLAR_MAX_RESULTS_PER_GROUP,
   SCHOLAR_MIN_YEAR,
-  REQUEST_DELAY_MS,
+  SCHOLAR_REQUEST_DELAY_MS,
 } from "./config";
-import type { ScholarItem, ArxivItem } from "./types";
+import type { ScholarItem, ArxivItem, SeenIdRegistry } from "./types";
 
 const SEMANTIC_SCHOLAR_API =
-  "https://api.semanticscholar.org/graph/v1/paper/search";
+  "https://api.semanticscholar.org/graph/v1/paper/search/bulk";
 const API_KEY = process.env.SEMANTIC_SCHOLAR_API_KEY ?? "";
 
 const FIELDS = [
@@ -22,8 +22,6 @@ const FIELDS = [
   "year",
   "fieldsOfStudy",
   "externalIds",
-  "url",
-  "publicationDate",
 ].join(",");
 
 function sleep(ms: number) {
@@ -89,12 +87,11 @@ interface S2Paper {
   year?: number;
   fieldsOfStudy?: string[];
   externalIds?: Record<string, string>;
-  url?: string;
-  publicationDate?: string;
 }
 
 interface S2SearchResponse {
   total: number;
+  token?: string;
   data?: S2Paper[];
 }
 
@@ -108,6 +105,22 @@ function loadArxivIds(): Set<string> {
   }
 }
 
+function loadSeenIds(): Set<string> {
+  const seenPath = path.join(process.cwd(), "data", "seen-ids.json");
+  try {
+    const registry: SeenIdRegistry = JSON.parse(fs.readFileSync(seenPath, "utf-8"));
+    const today = new Date().toISOString().slice(0, 10);
+    // Only treat as "seen" if it appeared on a *different* day
+    return new Set(
+      Object.entries(registry.ids)
+        .filter(([, dates]) => dates.some((d) => d !== today))
+        .map(([id]) => id),
+    );
+  } catch {
+    return new Set();
+  }
+}
+
 function toScholarItem(paper: S2Paper, group: string): ScholarItem | null {
   if (!paper.paperId || !paper.title) return null;
 
@@ -116,15 +129,15 @@ function toScholarItem(paper: S2Paper, group: string): ScholarItem | null {
     typeof paper.publicationVenue === "object"
       ? paper.publicationVenue?.name ?? ""
       : "";
-  const pubDate = paper.publicationDate ?? (paper.year ? `${paper.year}-01-01` : new Date().toISOString().slice(0, 10));
+  const pubDate = paper.year ? `${paper.year}-01-01` : new Date().toISOString().slice(0, 10);
 
   return {
     id: `scholar-${paper.paperId}`,
     source: "scholar",
     title: paper.title,
     description: (paper.abstract ?? "").replace(/\s+/g, " ").trim(),
-    url: paper.url ?? `https://www.semanticscholar.org/paper/${paper.paperId}`,
-    date: pubDate.slice(0, 10),
+    url: `https://www.semanticscholar.org/paper/${paper.paperId}`,
+    date: pubDate,
     authors,
     tags: paper.fieldsOfStudy ?? [],
     matchedGroup: group,
@@ -142,6 +155,7 @@ async function fetchAll(): Promise<ScholarItem[]> {
   const groups = Object.entries(SCHOLAR_KEYWORD_GROUPS);
   const seen = new Set<string>();
   const arxivIds = loadArxivIds();
+  const seenIds = loadSeenIds();
   const allItems: ScholarItem[] = [];
 
   for (const [group, keywords] of groups) {
@@ -149,9 +163,9 @@ async function fetchAll(): Promise<ScholarItem[]> {
     const params = new URLSearchParams({
       query,
       fields: FIELDS,
+      sort: "publicationDate:desc",
       year: `${SCHOLAR_MIN_YEAR}-`,
       fieldsOfStudy: "Computer Science,Engineering",
-      limit: String(SCHOLAR_MAX_RESULTS_PER_GROUP),
     });
     const url = `${SEMANTIC_SCHOLAR_API}?${params}`;
 
@@ -161,16 +175,23 @@ async function fetchAll(): Promise<ScholarItem[]> {
     const json = (await fetchWithRetry(url)) as S2SearchResponse | null;
     if (!json?.data) {
       console.warn(`  Skipping [${group}] after failed retries`);
-      await sleep(REQUEST_DELAY_MS);
+      await sleep(SCHOLAR_REQUEST_DELAY_MS);
       continue;
     }
 
     let added = 0;
+    let skippedDedup = 0;
     for (const paper of json.data) {
+      if (added >= SCHOLAR_MAX_RESULTS_PER_GROUP) break;
       if (seen.has(paper.paperId)) continue;
-      // Skip papers already in arXiv feed
-      if (paper.externalIds?.ArXiv && arxivIds.has(paper.externalIds.ArXiv))
+      if (paper.externalIds?.ArXiv && arxivIds.has(paper.externalIds.ArXiv)) {
+        skippedDedup++;
         continue;
+      }
+      if (seenIds.has(`scholar-${paper.paperId}`)) {
+        skippedDedup++;
+        continue;
+      }
 
       const item = toScholarItem(paper, group);
       if (item) {
@@ -180,12 +201,12 @@ async function fetchAll(): Promise<ScholarItem[]> {
       }
     }
     console.log(
-      `  Got ${json.data.length} results, ${added} new (${allItems.length} total)`,
+      `  Got ${json.data.length} results, ${added} new, ${skippedDedup} deduped (${allItems.length} total)`,
     );
-    await sleep(REQUEST_DELAY_MS);
+    await sleep(SCHOLAR_REQUEST_DELAY_MS);
   }
 
-  // Sort by citation count descending
+  // Sort by citation count so high-impact papers surface first in the feed
   allItems.sort((a, b) => b.citationCount - a.citationCount);
   console.log(
     `Fetched ${allItems.length} unique papers across ${groups.length} groups`,

@@ -148,3 +148,5 @@ export const SCHOLAR_KEYWORD_GROUPS: Record<string, string[]> = {
 
 export const SCHOLAR_MAX_RESULTS_PER_GROUP = 10;
 export const SCHOLAR_MIN_YEAR = new Date().getFullYear() - 1;
+// Delay between Semantic Scholar API requests (1 req/s with API key, 1.1s for safety)
+export const SCHOLAR_REQUEST_DELAY_MS = 1100;
