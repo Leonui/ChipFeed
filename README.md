@@ -1,13 +1,13 @@
 # ChipFeed
 
-Daily news aggregator for hardware design, AI accelerators, and related topics. Fetches trending GitHub repos and new arXiv papers automatically via GitHub Actions, served as a static Next.js site on Vercel.
+Daily news aggregator for hardware design, AI accelerators, and related topics. Fetches trending GitHub repos, new arXiv papers, and Semantic Scholar publications automatically via GitHub Actions, served as a static Next.js site on Vercel.
 
 ## Stack
 
 - **Frontend:** Next.js 15 (App Router, static export) + Tailwind CSS v4
 - **Data pipeline:** TypeScript scripts run by GitHub Actions (daily cron)
 - **Storage:** Cloudflare R2 (S3-compatible object storage)
-- **APIs:** GitHub Search API, arXiv API
+- **APIs:** GitHub Search API, arXiv API, Semantic Scholar API
 - **Hosting:** Vercel (free tier)
 
 > See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full pipeline diagram, environment setup, and content configuration.
@@ -27,6 +27,7 @@ Open [http://localhost:3000](http://localhost:3000).
 export GH_PAT=your_github_personal_access_token
 npm run fetch:github
 npm run fetch:arxiv
+npm run fetch:scholar
 npm run fetch:merge
 ```
 
@@ -50,6 +51,7 @@ The workflow runs daily at 05:00 UTC and can also be triggered manually via `wor
 | `R2_SECRET_ACCESS_KEY` | R2 API token secret |
 | `R2_BUCKET_NAME` | R2 bucket name |
 | `VERCEL_DEPLOY_HOOK` | Vercel deploy hook URL |
+| `SEMANTIC_SCHOLAR_API_KEY` | _(Optional)_ Semantic Scholar API key for higher rate limits |
 
 ## Project Structure
 
@@ -62,6 +64,7 @@ The workflow runs daily at 05:00 UTC and can also be triggered manually via `wor
 │   ├── types.ts                        # Shared RundownItem schema
 │   ├── fetch-github.ts                 # GitHub Search API fetcher
 │   ├── fetch-arxiv.ts                  # arXiv API fetcher
+│   ├── fetch-scholar.ts                # Semantic Scholar API fetcher
 │   ├── merge-and-dedupe.ts             # Combine, dedupe, write daily JSON
 │   ├── r2-client.ts                    # Shared S3 client for Cloudflare R2
 │   ├── r2-upload.ts                    # Upload data to R2 + prune old objects

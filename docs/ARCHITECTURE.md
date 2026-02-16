@@ -7,14 +7,18 @@
 ```mermaid
 flowchart TD
     subgraph "GitHub Actions (daily cron)"
+        H[(Cloudflare R2)] -->|download:index| H2[seen-ids.json\nindex.json]
         A[GitHub Search API] -->|fetch:github| C[data/_github.json]
         B[arXiv API] -->|fetch:arxiv| D[data/_arxiv.json]
+        S[Semantic Scholar API] -->|fetch:scholar| T[data/_scholar.json]
+        H2 -->|early dedup| S
         C --> E[merge-and-dedupe]
         D --> E
-        H -->|seen-ids.json| E
+        T --> E
+        H2 -->|seen-ids.json| E
         E --> F[data/daily/YYYY-MM-DD.json\ndata/index.json\ndata/seen-ids.json]
         F --> G[r2-upload]
-        G -->|PutObject + prune| H[(Cloudflare R2)]
+        G -->|PutObject + prune| H
         G --> I[curl Vercel deploy hook]
     end
 
@@ -33,14 +37,15 @@ flowchart TD
 |--------|------------|------|
 | `fetch-github.ts` | `fetch:github` | Queries GitHub Search API for each keyword group; writes `data/_github.json` |
 | `fetch-arxiv.ts` | `fetch:arxiv` | Queries arXiv API across configured categories and keywords; writes `data/_arxiv.json` |
-| `merge-and-dedupe.ts` | `fetch:merge` | Merges both sources, filters cross-day duplicates via `seen-ids.json`, sorts, writes `data/daily/YYYY-MM-DD.json` and updates `data/index.json` |
+| `fetch-scholar.ts` | `fetch:scholar` | Queries Semantic Scholar Bulk Search API; pre-deduplicates against `seen-ids.json` and arXiv; writes `data/_scholar.json` |
+| `merge-and-dedupe.ts` | `fetch:merge` | Merges all sources, filters cross-day duplicates via `seen-ids.json`, sorts, writes `data/daily/YYYY-MM-DD.json` and updates `data/index.json` |
 | `backfill-seen-ids.ts` | `backfill:seen` | One-time script to seed `seen-ids.json` from existing daily files |
 | `r2-upload.ts` | `upload:r2` | Uploads `index.json`, `seen-ids.json`, and all `daily/*.json` to R2; prunes objects older than `DATA_RETENTION_DAYS` |
 | `r2-download.ts` | _(prebuild)_ | Downloads `index.json` + each daily file from R2 into `data/` before `next build` |
 | `r2-download-index.ts` | `download:index` | Downloads `index.json` and `seen-ids.json` from R2 so `merge-and-dedupe` can use them |
 | `r2-client.ts` | — | Shared S3-compatible client for Cloudflare R2 |
 | `config.ts` | — | Keyword groups, arXiv categories, tunable constants |
-| `types.ts` | — | Shared TypeScript interfaces (`GitHubItem`, `ArxivItem`, `DailyData`, `IndexManifest`, `SeenIdRegistry`) |
+| `types.ts` | — | Shared TypeScript interfaces (`GitHubItem`, `ArxivItem`, `ScholarItem`, `DailyData`, `IndexManifest`, `SeenIdRegistry`) |
 
 ## Cross-Day Deduplication
 
@@ -83,6 +88,7 @@ npm run backfill:seen
 | `R2_SECRET_ACCESS_KEY` | Yes | R2 API token secret access key |
 | `R2_BUCKET_NAME` | Yes | R2 bucket name |
 | `VERCEL_DEPLOY_HOOK` | Yes | Vercel deploy hook URL — triggers a rebuild after upload |
+| `SEMANTIC_SCHOLAR_API_KEY` | No | Semantic Scholar API key — optional, enables higher rate limits |
 
 ### Vercel Environment Variables
 
@@ -101,7 +107,7 @@ Set these in **Vercel → Project Settings → Environment Variables**.
 
 All search keywords and constants live in `scripts/config.ts`.
 
-### Keyword Groups (8 groups, shared across GitHub + arXiv)
+### Keyword Groups (8 groups, shared across GitHub + arXiv + Scholar)
 
 | Group | Example keywords |
 |-------|-----------------|
@@ -114,6 +120,8 @@ All search keywords and constants live in `scripts/config.ts`.
 | `edge-ai` | TinyML, embedded ML, on-device inference |
 | `ai-hardware` | neuromorphic, in-memory computing, photonic computing |
 
+> Scholar uses phrase-style keywords tuned for Semantic Scholar's search (e.g., "FPGA design" instead of "FPGA").
+
 ### Tunable Constants
 
 | Constant | Default | Description |
@@ -122,6 +130,9 @@ All search keywords and constants live in `scripts/config.ts`.
 | `GITHUB_MAX_PAGES` | `1` | Max pages to paginate per keyword group |
 | `GITHUB_PER_PAGE` | `20` | Results per GitHub Search API page (max 100) |
 | `ARXIV_MAX_RESULTS` | `100` | Max papers per arXiv query |
+| `SCHOLAR_MAX_RESULTS_PER_GROUP` | `10` | Max papers kept per Scholar keyword group (sliced from bulk results) |
+| `SCHOLAR_MIN_YEAR` | current − 1 | Only fetch Scholar papers from this year onward |
+| `SCHOLAR_REQUEST_DELAY_MS` | `1100` | Delay between Scholar API calls (1 req/s with API key) |
 | `DATA_RETENTION_DAYS` | `365` | R2 objects older than this are pruned on upload |
 
 ## Local Development
@@ -135,7 +146,7 @@ export GH_PAT=your_github_personal_access_token
 npm run pipeline
 ```
 
-This runs the complete flow: download index + `seen-ids.json` from R2 → fetch GitHub → fetch arXiv → merge with cross-day dedup → upload back to R2.
+This runs the complete flow: download index + `seen-ids.json` from R2 → fetch GitHub → fetch arXiv → fetch Scholar → merge with cross-day dedup → upload back to R2.
 
 ### Fetching data only (no R2)
 
@@ -144,7 +155,7 @@ export GH_PAT=your_github_personal_access_token
 npm run fetch:all
 ```
 
-This fetches and merges locally but skips the R2 round-trip. Dedup still works if `data/seen-ids.json` exists locally (e.g., from a previous `pipeline` run or `npm run backfill:seen`).
+This fetches and merges locally but skips the R2 round-trip. Dedup still works if `data/seen-ids.json` exists locally (e.g., from a previous `pipeline` run or `npm run backfill:seen`). The Scholar fetcher also reads `seen-ids.json` for early cross-day dedup before slicing results.
 
 ### Testing R2 locally
 
