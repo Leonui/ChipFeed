@@ -15,7 +15,7 @@ function main() {
     const daily: DailyData = JSON.parse(fs.readFileSync(path.join(dailyDir, file), "utf-8"));
     const date = daily.date;
 
-    for (const item of [...daily.github, ...daily.arxiv]) {
+    for (const item of [...daily.github, ...daily.arxiv, ...(daily.scholar ?? [])]) {
       if (!seen.ids[item.id]) {
         seen.ids[item.id] = [date];
       } else if (!seen.ids[item.id].includes(date)) {

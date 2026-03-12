@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, GitFork, BookOpen, ExternalLink, Calendar, User, FileText, Github } from "lucide-react";
+import { Star, GitFork, BookOpen, ExternalLink, Calendar, User, FileText } from "lucide-react";
 import type { RundownItem, GitHubItem, ArxivItem, ScholarItem } from "../lib/types";
 import { cn } from "@/lib/utils";
 

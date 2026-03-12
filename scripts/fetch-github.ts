@@ -7,13 +7,10 @@ import {
   GITHUB_PER_PAGE,
 } from "./config";
 import type { GitHubItem } from "./types";
+import { sleep } from "./utils";
 
 const GITHUB_API = "https://api.github.com/search/repositories";
 const TOKEN = process.env.GH_PAT ?? "";
-
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 function yesterday(): string {
   const d = new Date();
@@ -39,7 +36,7 @@ async function fetchGroup(
 
     const headers: Record<string, string> = {
       Accept: "application/vnd.github+json",
-      "User-Agent": "rundown-site",
+      "User-Agent": "chipfeed",
     };
     if (TOKEN) headers.Authorization = `Bearer ${TOKEN}`;
 

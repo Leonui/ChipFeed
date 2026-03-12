@@ -8,12 +8,9 @@ import {
   REQUEST_DELAY_MS,
 } from "./config";
 import type { ArxivItem } from "./types";
+import { sleep, fetchWithRetry, matchGroup } from "./utils";
 
 const ARXIV_API = "https://export.arxiv.org/api/query";
-
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 const parser = new XMLParser({
   ignoreAttributes: false,
@@ -31,45 +28,8 @@ function toArray<T>(val: T | T[] | undefined): T[] {
 }
 
 
-function matchGroup(title: string, summary: string): string {
-  const text = `${title} ${summary}`.toLowerCase();
-  for (const [group, kws] of Object.entries(ARXIV_KEYWORD_GROUPS)) {
-    if (kws.some((kw) => text.includes(kw.toLowerCase()))) return group;
-  }
-  return "other";
-}
-
-const MAX_RETRIES = 4;
-const INITIAL_BACKOFF_MS = 10000;
-const RETRYABLE_STATUSES = [429, 500, 502, 503];
-
-async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<string | null> {
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const res = await fetch(url);
-      if (res.ok) return await res.text();
-
-      console.warn(`  Attempt ${attempt}/${retries}: HTTP ${res.status} ${res.statusText}`);
-      if (RETRYABLE_STATUSES.includes(res.status)) {
-        const retryAfter = res.headers.get("retry-after");
-        const backoff = retryAfter
-          ? parseInt(retryAfter, 10) * 1000
-          : INITIAL_BACKOFF_MS * Math.pow(2, attempt - 1);
-        console.warn(`  Retrying in ${backoff / 1000}s...`);
-        await sleep(backoff);
-        continue;
-      }
-      return null;
-    } catch (err) {
-      console.warn(`  Attempt ${attempt}/${retries}: Network error - ${err}`);
-      if (attempt < retries) {
-        const backoff = INITIAL_BACKOFF_MS * Math.pow(2, attempt - 1);
-        console.warn(`  Retrying in ${backoff / 1000}s...`);
-        await sleep(backoff);
-      }
-    }
-  }
-  return null;
+function matchArxivGroup(title: string, summary: string): string {
+  return matchGroup(`${title} ${summary}`, ARXIV_KEYWORD_GROUPS);
 }
 
 function buildGroupQuery(group: string, keywords: string[]): string {
@@ -111,7 +71,7 @@ function parseEntries(xml: string): ArxivItem[] {
       date: published.toISOString().slice(0, 10),
       authors,
       tags: cats,
-      matchedGroup: matchGroup(title, description),
+      matchedGroup: matchArxivGroup(title, description),
       arxivId,
       pdfUrl: pdfLink?.["@_href"] ?? `https://arxiv.org/pdf/${arxivId}`,
       primaryCategory: cats[0] ?? "",
@@ -134,12 +94,13 @@ async function fetchAll(): Promise<ArxivItem[]> {
       `&max_results=${perGroup}`;
 
     console.log(`Fetching [${group}] (${keywords.length} keywords, max ${perGroup})...`);
-    const xml = await fetchWithRetry(url);
-    if (!xml) {
+    const res = await fetchWithRetry(url);
+    if (!res) {
       console.warn(`  Skipping [${group}] after failed retries`);
       await sleep(REQUEST_DELAY_MS);
       continue;
     }
+    const xml = await res.text();
 
     const items = parseEntries(xml);
     let added = 0;

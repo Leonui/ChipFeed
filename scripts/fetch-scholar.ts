@@ -7,6 +7,7 @@ import {
   SCHOLAR_REQUEST_DELAY_MS,
 } from "./config";
 import type { ScholarItem, ArxivItem, SeenIdRegistry } from "./types";
+import { sleep, fetchWithRetry } from "./utils";
 
 const SEMANTIC_SCHOLAR_API =
   "https://api.semanticscholar.org/graph/v1/paper/search/bulk";
@@ -23,59 +24,6 @@ const FIELDS = [
   "fieldsOfStudy",
   "externalIds",
 ].join(",");
-
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-const MAX_RETRIES = 4;
-const INITIAL_BACKOFF_MS = 10_000;
-const RETRYABLE_STATUSES = [429, 500, 502, 503];
-
-async function fetchWithRetry(
-  url: string,
-  retries = MAX_RETRIES,
-): Promise<unknown | null> {
-  const headers: Record<string, string> = { Accept: "application/json" };
-  if (API_KEY) headers["x-api-key"] = API_KEY;
-
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const res = await fetch(url, { headers });
-      if (res.ok) return await res.json();
-
-      console.warn(
-        `  Attempt ${attempt}/${retries}: HTTP ${res.status} ${res.statusText}`,
-      );
-      if (RETRYABLE_STATUSES.includes(res.status)) {
-        const retryAfter = res.headers.get("retry-after");
-        const backoff = retryAfter
-          ? parseInt(retryAfter, 10) * 1000
-          : INITIAL_BACKOFF_MS * Math.pow(2, attempt - 1);
-        console.warn(`  Retrying in ${backoff / 1000}s...`);
-        await sleep(backoff);
-        continue;
-      }
-      return null;
-    } catch (err) {
-      console.warn(`  Attempt ${attempt}/${retries}: Network error - ${err}`);
-      if (attempt < retries) {
-        const backoff = INITIAL_BACKOFF_MS * Math.pow(2, attempt - 1);
-        console.warn(`  Retrying in ${backoff / 1000}s...`);
-        await sleep(backoff);
-      }
-    }
-  }
-  return null;
-}
-
-function matchGroup(title: string, abstract: string): string {
-  const text = `${title} ${abstract}`.toLowerCase();
-  for (const [group, kws] of Object.entries(SCHOLAR_KEYWORD_GROUPS)) {
-    if (kws.some((kw) => text.includes(kw.toLowerCase()))) return group;
-  }
-  return "other";
-}
 
 interface S2Paper {
   paperId: string;
@@ -172,9 +120,17 @@ async function fetchAll(): Promise<ScholarItem[]> {
     console.log(
       `Fetching [${group}] (${keywords.length} keywords, max ${SCHOLAR_MAX_RESULTS_PER_GROUP})...`,
     );
-    const json = (await fetchWithRetry(url)) as S2SearchResponse | null;
-    if (!json?.data) {
+    const headers: Record<string, string> = { Accept: "application/json" };
+    if (API_KEY) headers["x-api-key"] = API_KEY;
+    const res = await fetchWithRetry(url, { headers });
+    if (!res) {
       console.warn(`  Skipping [${group}] after failed retries`);
+      await sleep(SCHOLAR_REQUEST_DELAY_MS);
+      continue;
+    }
+    const json = (await res.json()) as S2SearchResponse;
+    if (!json?.data) {
+      console.warn(`  Skipping [${group}] - no data in response`);
       await sleep(SCHOLAR_REQUEST_DELAY_MS);
       continue;
     }

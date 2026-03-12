@@ -42,7 +42,7 @@ export interface DailyData {
   fetchedAt: string;
   github: GitHubItem[];
   arxiv: ArxivItem[];
-  scholar: ScholarItem[];
+  scholar?: ScholarItem[];
 }
 
 export interface IndexManifest {

@@ -1,12 +1,12 @@
 {
-  "name": "rundown-site",
+  "name": "chipfeed",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "fetch:github": "tsx scripts/fetch-github.ts",
     "fetch:arxiv": "tsx scripts/fetch-arxiv.ts",
     "fetch:scholar": "tsx scripts/fetch-scholar.ts",
