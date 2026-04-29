@@ -35,6 +35,11 @@ export const GITHUB_KEYWORD_GROUPS: Record<string, string[]> = {
     "neuromorphic", "in-memory-computing", "photonic-computing",
     "analog-computing", "compute-in-memory",
   ],
+  "llm-eda": [
+    "LLM4EDA", "LLM-EDA", "LLM-assisted-hardware-design",
+    "RTL-generation", "Verilog-generation", "hardware-code-generation",
+    "EDA-agent", "circuit-agent", "schematic-generation",
+  ],
 };
 
 // --------------------
@@ -90,6 +95,18 @@ export const ARXIV_KEYWORD_GROUPS: Record<string, string[]> = {
     "analog computing", "compute-in-memory",
     "processing-in-memory", "memristor",
   ],
+  "llm-eda": [
+    "LLM for EDA", "LLMs for EDA",
+    "LLM assisted hardware design", "LLM aided RTL generation",
+    "LLM aided design RTL generation", "LLM assisted RTL generation",
+    "natural language to RTL", "RTL code generation",
+    "Verilog code generation", "hardware code generation",
+    "hardware design automation", "hardware design verification",
+    "LLM assisted circuit verification", "multi agent RTL generation",
+    "EDA agent", "AI agent hardware design",
+    "circuit design assistant", "circuit schematic generation",
+    "natural language circuit design",
+  ],
 };
 
 // ---------------------
@@ -143,6 +160,17 @@ export const SCHOLAR_KEYWORD_GROUPS: Record<string, string[]> = {
   "ai-hardware": [
     "neuromorphic computing", "in-memory computing",
     "photonic computing", "analog computing", "compute-in-memory",
+  ],
+  "llm-eda": [
+    "large language models for EDA", "LLM assisted hardware design",
+    "LLM aided RTL generation", "LLM aided design RTL generation",
+    "LLM assisted RTL generation", "natural language to RTL",
+    "RTL code generation", "Verilog code generation",
+    "hardware code generation", "hardware design automation",
+    "hardware design verification", "LLM assisted circuit verification",
+    "multi agent RTL generation", "EDA agent",
+    "AI agent hardware design", "circuit design assistant",
+    "circuit schematic generation", "natural language circuit design",
   ],
 };
 

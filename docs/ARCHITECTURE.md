@@ -107,7 +107,7 @@ Set these in **Vercel → Project Settings → Environment Variables**.
 
 All search keywords and constants live in `scripts/config.ts`.
 
-### Keyword Groups (8 groups, shared across GitHub + arXiv + Scholar)
+### Keyword Groups (9 groups, shared across GitHub + arXiv + Scholar)
 
 | Group | Example keywords |
 |-------|-----------------|
@@ -119,6 +119,7 @@ All search keywords and constants live in `scripts/config.ts`.
 | `frameworks` | TVM, MLIR, ONNX, TensorRT, OpenVINO, Triton |
 | `edge-ai` | TinyML, embedded ML, on-device inference |
 | `ai-hardware` | neuromorphic, in-memory computing, photonic computing |
+| `llm-eda` | LLM-assisted hardware design, RTL generation, EDA agents, circuit design assistants |
 
 > Scholar uses phrase-style keywords tuned for Semantic Scholar's search (e.g., "FPGA design" instead of "FPGA").
 
@@ -126,14 +127,14 @@ All search keywords and constants live in `scripts/config.ts`.
 
 | Constant | Default | Description |
 |----------|---------|-------------|
-| `REQUEST_DELAY_MS` | `3500` | Delay between API requests (arXiv requires >3 s) |
+| `REQUEST_DELAY_MS` | `6000` | Delay between API requests (arXiv requires >3 s) |
 | `GITHUB_MAX_PAGES` | `1` | Max pages to paginate per keyword group |
 | `GITHUB_PER_PAGE` | `20` | Results per GitHub Search API page (max 100) |
 | `ARXIV_MAX_RESULTS` | `100` | Max papers per arXiv query |
 | `SCHOLAR_MAX_RESULTS_PER_GROUP` | `10` | Max papers kept per Scholar keyword group (sliced from bulk results) |
 | `SCHOLAR_MIN_YEAR` | current − 1 | Only fetch Scholar papers from this year onward |
 | `SCHOLAR_REQUEST_DELAY_MS` | `1100` | Delay between Scholar API calls (1 req/s with API key) |
-| `DATA_RETENTION_DAYS` | `365` | R2 objects older than this are pruned on upload |
+| `DATA_RETENTION_DAYS` | `36500` | R2 objects older than this are pruned on upload |
 
 ## Local Development
 
